@@ -1,6 +1,6 @@
 <div class="profile">
     <div class="profile_pic">
-        <img src="{{ url('img/fotos_user/'.Auth::user()->foto) }}" alt="..." class="img-circle profile_img">
+        <img src=" @if( Auth::user()->foto ) {{ url('img/fotos_user/'.Auth::user()->foto) }} @endif " alt="..." class="img-circle profile_img">
     </div>
     <div class="profile_info">
         <span>Bienvenido,</span>

@@ -48,9 +48,9 @@ class SolicitanteInstitucion extends Controller
             $solicitante = new Solicitanteinst();
             $solicitante->tipo_reg = $request->tipo_reg;
             $solicitante->codigo_rif = $request->codigo_rif;
-            $solicitante->nombre = $request->nombre;
+            $solicitante->nombre = strtoupper($request->nombre);
             $solicitante->telefono = $request->telefonos;
-            $solicitante->direccion = $request->direccion;
+            $solicitante->direccion = strtoupper($request->direccion);
             $solicitante->id_municipio = $request->municipio;
             $solicitante->id_parroquia = $request->parroquia;
             $solicitante->save();

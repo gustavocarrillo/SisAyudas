@@ -123,8 +123,7 @@
     </div>
 {{-- dd(session('data')) --}}
 @if(session('data'))
-    <div class="col-md-12 col-sm-12 col-xs-12" id="datos">
-        <div class="x_panel">
+    <div class="x_panel col-md-12 col-sm-12 col-xs-12" id="datos">
             <div class="x_title">
                 <h2>Resultados de Busqueda<small><strong><span id="redulttados">@if(session('resultados')){{ session('resultados') }} @endif</span></strong></small></h2>
                 <div class="clearfix"></div>
@@ -132,7 +131,7 @@
             <div class="x_content">
                 <p class="text-muted font-13 m-b-30">
                 </p>
-                <table id="datatable-buttons" class="table table-striped table-bordered">
+                <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                     @if(array_has(session('data'),'b_a'))
@@ -268,7 +267,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
     </div>
 @endif
 @if(session('error'))

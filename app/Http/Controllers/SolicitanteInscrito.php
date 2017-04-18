@@ -63,7 +63,7 @@ class SolicitanteInscrito extends Controller
             $_parroquia->save();
         }
 
-        if(!$centro && $centro != 0){
+        if(!$centro){
             $_centro = new Centro();
             $_centro->nombre = $request->centro;
             $_centro->id_municipio = (!is_null($municipio)) ? $municipio : Municipio::where('nombre',$request->municipio)->value('id');

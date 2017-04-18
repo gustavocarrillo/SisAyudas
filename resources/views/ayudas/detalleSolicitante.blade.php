@@ -17,7 +17,6 @@
         </div>
         <div class="x_content">
             <div class="row">
-
                     @foreach($datos as $dato)
                         <div class="col-md-4">
                             <div class="row">
@@ -26,22 +25,17 @@
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-md-3"><strong>Nombres: </strong></div>
-                                <div class="col-md-10">{{ $dato->nombres }}</div>
+                                <div class="col-md-5"><strong>@if(isset( $dato->apellidos )) Nombres y Apellidos: @else Razon Social: @endif</strong></div>
+                                <div class="col-md-10">@if(isset( $dato->apellidos )) {{ $dato->nombres.' '.$dato->apellidos }} @else {{ $dato->nombres }} @endif</div>
                             </div>
                             <br>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Apellidos: </strong></div>
-                                <div class="col-md-10">@if(isset( $dato->apellidos )){{ $dato->apellidos }}@endif</div>
-                            </div>
-                            <br>
-                        </div>
-                        <div class="col-md-4">
                             <div class="row">
                                 <div class="col-md-3"><strong>Telefono: </strong></div>
                                 <div class="col-md-10">{{ $dato->telefono }}</div>
                             </div>
                             <br>
+                        </div>
+                        <div class="col-md-4">
                             <div class="row">
                                 <div class="col-md-3"><strong>Dirección: </strong></div>
                                 <div class="col-md-10">{{ $dato->direccion }}</div>
@@ -52,14 +46,13 @@
                                 <div class="col-md-11">{{ $dato->municipio }}</div>
                             </div>
                             <br>
-                        </div>
-                        <div class="col-md-4">
                             <div class="row">
                                 <div class="col-md-2"><strong>Parroquia: </strong></div>
                                 <div class="col-md-11">{{ $dato->parroquia }}</div>
                             </div>
+                        </div>
+                        <div class="col-md-4">
                             @if(isset($dato->centro))
-                                <br>
                                 <div class="row">
                                     <div class="col-md-5"><strong>Centro de Votación: </strong></div>
                                     <div class="col-md-11">{{ $dato->centro }}</div>

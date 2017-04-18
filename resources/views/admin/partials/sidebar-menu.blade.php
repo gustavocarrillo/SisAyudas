@@ -11,7 +11,12 @@
 
                 </ul>
             </li>
-            <li><a href="{{ route('listar-solicitudes') }}"><i class="fa fa-folder-open"></i> Tipos de Solicitud</a></li>
+            <li><a><i class="fa fa-folder-open"></i> Tipos de Solicitud</a>
+                <ul class="nav child_menu">
+                    <li><a href="{{ route('nueva-solicitudes') }}">Nuevo Tipo de Solicitud</a></li>
+                    <li><a href="{{ route('listar-solicitudes')  }}">Ver Tipos de Solicitud</a></li>
+                </ul>
+            </li>
             {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="form.html">General Form</a></li>

@@ -7,6 +7,7 @@
 
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
+        @include('flash::message')
         <div class="x_panel">
             <div class="x_title">
                 <h2>Tipos de Solicitud</h2>
@@ -28,7 +29,7 @@
                             <td>{{ $sol->id }}</td>
                             <td>{{ $sol->nombre }}</td>
                             <td>{{ $sol->intervalo }}</td>
-                            <td><a class="label label-primary"><span class="fa fa-edit"></span></a>
+                            <td><a href="{{ route('editar-solicitudes',$sol->id) }}" class="label label-primary"><span class="fa fa-edit"></span></a>
                                 <a class="label label-danger"><span class="fa fa-remove"></span></a></td>
                         </tr>
                     @endforeach
@@ -39,6 +40,7 @@
     </div>
     </div>
 @endsection
+
 @section('js')
     <script src="{{ asset('vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>

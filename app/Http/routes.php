@@ -28,7 +28,7 @@ Route::get('auth/login',
 Route::post('auth/login', 'Auth\AuthController@autenticar');
 
 
-Route::group(['prefix' => '/','middleware' => 'auth'], function (){
+Route::group(['prefix' => '/'], function (){
 
     Route::post('usuario/guardar',[
         'uses' => 'loginController@store',
@@ -43,7 +43,7 @@ Route::group(['prefix' => '/','middleware' => 'auth'], function (){
 
 //Rutas para registro
     Route::get('auth/registro',[
-        'middleware' => 'auth',
+       // 'middleware' => 'auth',
         'uses' => 'Auth\AuthController@registroIndex',
         'as' => 'registro'
     ]);
@@ -55,7 +55,6 @@ Route::group(['prefix' => '/','middleware' => 'auth'], function (){
 //Rutas para panel administrativo
     Route::get('admin/panel/index',
         [
-            //'middleware' => 'auth',
             'uses' => 'PanelController@index',
             'as' => 'panel'
         ]
@@ -136,18 +135,51 @@ Route::group(['prefix'=>'admin/panel','middleware'=>'auth'], function (){
 //Fin clave de desbloqueo de campos
 
 //tipos de solicitudes
-//Route::group('')
-    Route::get('solicitudes/listar',[
+Route::group(['prefix' => 'solicitudes','middleware' => 'auth'],function (){
+
+    Route::get('listar',[
             'uses' => 'TiposSolicitud@index',
             'as' => 'listar-solicitudes'
         ]
     );
 
-    Route::get('solicitudes/listar',[
+    Route::get('listar',[
             'uses' => 'TiposSolicitud@index',
             'as' => 'listar-solicitudes'
         ]
     );
+
+    Route::get('nueva',[
+            'uses' => 'TiposSolicitud@nueva',
+            'as' => 'nueva-solicitudes'
+        ]
+    );
+
+    Route::post('guardar',[
+            'uses' => 'TiposSolicitud@guardar',
+            'as' => 'guardar-solicitudes'
+        ]
+    );
+
+    Route::get('editar/{id}',[
+            'uses' => 'TiposSolicitud@editar',
+            'as' => 'editar-solicitudes'
+        ]
+    );
+
+    Route::post('editado',[
+            'uses' => 'TiposSolicitud@editado',
+            'as' => 'editado-solicitudes'
+        ]
+    );
+
+    Route::get('eliminar/{id}',[
+            'uses' => 'TiposSolicitud@eliminar',
+            'as' => 'eliminar-solicitudes'
+        ]
+    );
+});
+
 //Fin tipos de solicitudes
 
 //Listado de Solicitantes registrados
@@ -240,6 +272,11 @@ Route::group(['prefix'=>'admin/panel','middleware'=>'auth'], function (){
             'as' => 'editar-ayuda'
         ]
     );
+    Route::post('ayuda/editado',[
+            'uses' => 'Ayudas@editado',
+            'as' => 'editado-ayuda'
+        ]
+    );
 
     Route::get('ayuda/editar/{id}',[
             'uses' => 'Ayudas@eliminarAyuda',
@@ -269,6 +306,11 @@ Route::group(['prefix'=>'admin/panel','middleware'=>'auth'], function (){
     );
     Route::get('admin/ayudasNoCne/editar/{id}', [
             'uses' => 'Ayudas@editarNoCne',
+            'as' => ('editar-ayuda-inst')
+        ]
+    );
+    Route::get('admin/ayudasInst/editar/{id}', [
+            'uses' => 'Ayudas@editarInst',
             'as' => ('editar-ayuda-inst')
         ]
     );

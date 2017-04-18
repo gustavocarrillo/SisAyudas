@@ -14,13 +14,13 @@
     </div>
     <div class="x_content" style="display: block;">
         <br>
-        <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
-
+        <form action="{{ route('editado-ayuda') }}" method="post" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+            <input type="hidden" name="id" value="{{ $datos->id }}">
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Solicitante:
                 </label>
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <span class="form-control">{{$datos->solicitante}}</span>
+                    <span class="form-control">{{ $datos->solicitante }}</span>
                 </div>
             </div>
             <div class="form-group">
@@ -36,7 +36,7 @@
                     <select id="solicitud" class="select2_group form-control" name="solicitudes">
                         <option value="">Seleccione...</option>
                         @foreach($ts as $t)
-                            <option value="{{ $t->id }}" @if($t->nombre == $datos->solicitud) selected @endif>{{ ucfirst($t->nombre) }}</option>
+                            <option value="{{ $t->id }}" @if( $t->nombre == $datos->solicitud ) selected @endif>{{ ucfirst($t->nombre) }}</option>
                         @endforeach
                     </select>
                 </div>

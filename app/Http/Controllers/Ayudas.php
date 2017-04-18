@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Solicitud as TS;
 
+
 class Ayudas extends Controller
 {
     public function buscarAyuda(Request $request)
@@ -244,6 +245,15 @@ class Ayudas extends Controller
             ->get();
 
         $ts = TS::all();
+
+        return view('ayudas.editar')
+            ->with('ayuda',$ayuda)
+            ->with('ts',$ts);
+    }
+
+    public function editado(){
+
+
 
         return view('ayudas.editar')
             ->with('ayuda',$ayuda)
