@@ -1,9 +1,13 @@
 @extends('admin.plantilla.plantilla')
 
+@section('head')
+    <link href="{{ asset('jquery-ui-custom/jquery-ui.css') }}" rel="stylesheet">
+@endsection
+
 @section('contenido')
     <div class="x_panel">
     <div class="x_title">
-        <h2>Nuevo Tipo de Solicitud</h2>
+        <h2>Nuevo Evento</h2>
         <div class="clearfix"></div>
     </div>
         <div class="x_content">
@@ -24,8 +28,8 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha:
                     </label>
                     </label>
-                    <div class="col-md-1 col-sm-1 col-xs-1">
-                        <input type="text" id="fecha" name="fecha" value="" class="form-control col-md-7 col-xs-12" maxlength="3" required="required">
+                    <div class="col-md-2 col-sm-2 col-xs-6">
+                        <input type="text" id="fecha" name="fecha" value="" class="form-control col-md-5 col-xs-12" required="required" placeholder="Click Aqui"  readonly>
                     </div>
                 </div>
                 <div class="ln_solid"></div>
@@ -38,4 +42,9 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script src={{ asset("jquery-ui-custom/jquery-ui.js") }}></script>
+    <script src={{ asset("js/personalizado.js") }}></script>
 @endsection

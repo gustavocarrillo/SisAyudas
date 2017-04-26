@@ -39,6 +39,7 @@ class SolicitanteInscrito extends Controller
             'municipio' => 'min:3|max:50|required',
             'parroquia' => 'min:3|max:50|required',
             'centro' => 'min:3|max:150|required',
+            'evento' => 'required',
             'solicitudes' => 'required',
             'necesidad' => 'required',
         ]);
@@ -116,7 +117,7 @@ class SolicitanteInscrito extends Controller
                 }
             }
 
-            $solicitante->solicitudes()->attach($solicitud,['detalle' => $request->necesidad,'fecha' => $fecha]);
+            $solicitante->solicitudes()->attach($solicitud,['id_evento' => $request->evento,'detalle' => $request->necesidad,'fecha' => $fecha]);
 
             if($request->ajax()){
                 return response()->json(['resp' => 'true','mensaje' => 'Ayuda guardada exitosamente','']);

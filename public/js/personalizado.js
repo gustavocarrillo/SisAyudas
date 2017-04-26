@@ -37,6 +37,7 @@ $(btn).click(function () {
     var municipio = $('#municipio').val();
     var parroquia = $('#parroquia').val();
     var centro = $('#centro').val();
+    var evento = $('#evento').val();
     var solicitud = $('#solicitud').val();
     var necesidad = $('#necesidad').val();
     var token = $('#token').val();
@@ -58,6 +59,7 @@ $(btn).click(function () {
             municipio: municipio,
             parroquia: parroquia,
             centro: centro,
+            evento: evento,
             solicitudes: solicitud,
             necesidad: necesidad
         },
@@ -110,6 +112,7 @@ $('#guardar_inst').click(function () {
     var tlfs = $('#telefonos').val();
     var municipio = $('#municipio').val();
     var parroquia = $('#parroquia').val();
+    var evento = $('#evento').val();
     var solicitud = $('#solicitud').val();
     var necesidad = $('#necesidad').val();
     var token = $('#token').val();
@@ -128,6 +131,7 @@ $('#guardar_inst').click(function () {
             telefonos: tlfs,
             municipio: municipio,
             parroquia: parroquia,
+            evento: evento,
             solicitud: solicitud,
             necesidad: necesidad
         },

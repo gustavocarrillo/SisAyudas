@@ -10,7 +10,7 @@ class Solicitud extends Model
     protected $fillable = ['nombre','intervalo'];
 
     public function solicitantes(){
-        return $this->belongsToMany('App\Solicitante')->withPivot('detalle','fecha','estatus','fecha_pro')->withTimestamps();
+        return $this->belongsToMany('App\Solicitante')->withPivot('id','id_evento','detalle','fecha','estatus','fecha_pro')->withTimestamps();
     }
     public function solicitantesNoCne(){
         return $this->belongsToMany('App\Solicitantenocne')->withPivot('detalle','fecha','estatus','fecha_pro')->withTimestamps();

@@ -100,7 +100,18 @@
                     <div id="msj-success" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 alert alert-success" role="alert" style="display: none"></div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Solicitudes</label>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Evento:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select id="evento" class="select2_group form-control" name="evento">
+                            <option value="">Seleccione...</option>
+                            @foreach(session('eventos') as $evn)
+                                <option value="{{ $evn->id }}">{{ strtoupper($evn->nombre) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Solicitudes:</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select id="solicitud" class="select2_group form-control" name="solicitudes">
                             <option value="">Seleccione...</option>
@@ -111,7 +122,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Nescesidad: </label>
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Necesidad: </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <textarea id="necesidad" name="necesidad" class="form-control" rows="6"></textarea>
                     </div>

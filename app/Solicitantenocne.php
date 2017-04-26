@@ -12,7 +12,7 @@ class Solicitantenocne extends Model
 
     public function solicitudes()
     {
-        return $this->belongsToMany('App\Solicitud')->withPivot('detalle','fecha','estatus','fecha_pro')->withTimestamps();
+        return $this->belongsToMany('App\Solicitud')->withPivot('id_evento','detalle','fecha','estatus','fecha_pro')->withTimestamps();
     }
 
     public function municipio()
@@ -25,8 +25,4 @@ class Solicitantenocne extends Model
         return $this->belongsTo('App\Parroquia');
     }
 
-    public function evento()
-    {
-        return $this->belongsTo('App\Evento');
-    }
 }

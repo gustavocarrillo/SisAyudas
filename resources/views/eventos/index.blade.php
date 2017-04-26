@@ -28,9 +28,9 @@
                         <tr>
                             <td>{{ $evn->id }}</td>
                             <td>{{ $evn->nombre }}</td>
-                            <td>{{ $evn->fecha }}</td>
+                            <td>{{ date('d-m-Y', strtotime($evn->fecha)) }}</td>
                             <td>
-                                <a href="{{ route('editar-solicitudes',$evn->id) }}" class="label label-primary"><span class="fa fa-edit"></span></a>
+                                <a href="{{ route('editar-eventos',$evn->id) }}" class="label label-primary"><span class="fa fa-edit"></span></a>
                                 <a class="label label-danger"><span class="fa fa-remove"></span></a></td>
                         </tr>
                     @endforeach

@@ -13,18 +13,26 @@ use App\Municipio as Municipio;
 use App\Parroquia as Parroquia;
 use App\Http\Controllers\SolicitanteInscrito as SOLI;
 use Illuminate\Support\Facades\DB;
+use App\Evento;
 
 class SolicitanteInstitucion extends Controller
 {
     /**
      * @return $this
      */
-    public function index(){
+    public function index()
+    {
         $municipios = Municipio::all();
+
         $parroquias = Parroquia::all();
+
         $ts = TS::all();
+
+        $eventos = Evento::all();
+
         return view('ayudas.instituciones')
             ->with('ts',$ts)
+            ->with('eventos',$eventos)
             ->with('parroquias',$parroquias)
             ->with('municipios',$municipios);
     }
@@ -88,7 +96,7 @@ class SolicitanteInstitucion extends Controller
                 }
             }
 
-            $solicitante->solicitudes()->attach($request->solicitud,['detalle' => $request->necesidad,'fecha' => $request->fecha]);
+            $solicitante->solicitudes()->attach($request->solicitud,['id_evento' => $request->evento,'detalle' => $request->necesidad,'fecha' => $request->fecha]);
 
             if($request->ajax()){
                 return response()->json(['resp' => 'true','mensaje' => 'Ayuda guardada exitosamente','']);

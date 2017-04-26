@@ -11,7 +11,13 @@
 
                 </ul>
             </li>
-            <li><a><i class="fa fa-folder-open"></i> Tipos de Solicitud</a>
+            <li><a><i class="fa fa-calendar"></i>Eventos</a>
+                <ul class="nav child_menu">
+                    <li><a href="{{ route('nuevo-eventos') }}">Nuevo Evento</a></li>
+                    <li><a href="{{ route('listar-eventos')  }}">Ver Eventos</a></li>
+                </ul>
+            </li>
+            <li><a><i class="fa fa-folder-open"></i>Tipos de Solicitud</a>
                 <ul class="nav child_menu">
                     <li><a href="{{ route('nueva-solicitudes') }}">Nuevo Tipo de Solicitud</a></li>
                     <li><a href="{{ route('listar-solicitudes')  }}">Ver Tipos de Solicitud</a></li>

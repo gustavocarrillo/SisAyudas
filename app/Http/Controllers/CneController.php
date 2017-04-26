@@ -12,6 +12,7 @@ use App\Firmante as Firmante;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Solicitante;
+use App\Evento;
 
 use Validator;
 
@@ -60,6 +61,7 @@ class CneController extends Controller
         }
         if(count($info) <= 2){
             $ts = TS::all();
+            $eventos = Evento::all();
             $municipios = Municipio::all();
             $parroquias = Parroquia::all();
             flash('NO REGISTRADO EN EL CNE','warning');
@@ -68,6 +70,7 @@ class CneController extends Controller
                 ->with('ts',$ts)
                 ->with('municipios',$municipios)
                 ->with('parroquias',$parroquias)
+                ->with('eventos',$eventos)
                 ->with('firma',$firmante)
                 ->with('existe',$existe)
                 ->with('hide',$visibilidad);
@@ -142,6 +145,7 @@ class CneController extends Controller
         }
 
         $ts = TS::all();
+        $eventos = Evento::all();
 
         // Flujo Normal cuando solo esta registrado en el CNE y no es Miembro de Mesa
         if ($rows2 > 0 AND $rows2 <= 10) {
@@ -158,6 +162,7 @@ class CneController extends Controller
             return redirect()->route('ayudas-naturales')
                 ->with('data',array('datos' =>$datos))
                 ->with('ts',$ts)
+                ->with('eventos',$eventos)
                 ->with('firma',$firmante)
                 ->with('existe',$existe)
                 ->with('visibilidad',$visibilidad);
@@ -177,6 +182,7 @@ class CneController extends Controller
             return redirect()->route('ayudas-naturales')
                 ->with('data',array('datos' =>$datos))
                 ->with('ts',$ts)
+                ->with('eventos',$eventos)
                 ->with('firma',$firmante)
                 ->with('existe',$existe)
                 ->with('visibilidad',$visibilidad);
@@ -196,6 +202,7 @@ class CneController extends Controller
             return redirect()->route('ayudas-naturales')
                 ->with('data',array('datos' =>$datos))
                 ->with('ts',$ts)
+                ->with('eventos',$eventos)
                 ->with('firma',$firmante)
                 ->with('existe',$existe)
                 ->with('visibilidad',$visibilidad);

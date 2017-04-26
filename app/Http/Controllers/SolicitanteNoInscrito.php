@@ -80,11 +80,9 @@ class SolicitanteNoInscrito extends Controller
                 if ($diferencia == false){
                     return response()->json(['resp' => 'false','mensaje' => 'La solicitud no puede ser procesada por intervalo vigente']);
                 }
-
-
             }
 
-            $solicitante->solicitudes()->attach($solicitud,['detalle' => $request->necesidad,'fecha' => $fecha]);
+            $solicitante->solicitudes()->attach($solicitud,['id_evento' => $request->evento,'detalle' => $request->necesidad,'fecha' => $fecha]);
 
             if($request->ajax()){
                 return response()->json(['resp' => 'true','mensaje' => 'Ayuda guardada exitosamente','']);
@@ -92,8 +90,13 @@ class SolicitanteNoInscrito extends Controller
         }
     }
 
-    public function solicitanteDetalle($id){
+    public function solicitanteDetalle($id)
+    {
+        return view('ayudas.detalleSolicitante',['datos' => $this->getDatosSolicitante($id),'ayudas' => $this->getAyudas($id),'tipo'=>'no cne']);
+    }
 
+    public function getDatosSolicitante($id)
+    {
         $solicitante = DB::table('solicitantes_no_cne')
             ->join('municipios','solicitantes_no_cne.id_municipio','=','municipios.id')
             ->join('parroquias','solicitantes_no_cne.id_parroquia','=','parroquias.id')
@@ -107,6 +110,11 @@ class SolicitanteNoInscrito extends Controller
                 'parroquias.nombre as parroquia')
             ->get();
 
+        return $solicitante;
+    }
+
+    public function getAyudas($id)
+    {
         $ayudas = DB::table('solicitantenocne_solicitud')
             ->join('solicitudes','solicitantenocne_solicitud.solicitud_id','=','solicitudes.id')
             ->where('solicitantenocne_solicitud.solicitantenocne_id','=',$id)
@@ -117,7 +125,7 @@ class SolicitanteNoInscrito extends Controller
                 'solicitantenocne_solicitud.fecha_pro as procesada')
             ->get();
 
-        return view('ayudas.detalleSolicitante',['datos' => $solicitante,'ayudas' => $ayudas,'tipo'=>'nocne']);
+        return $ayudas;
     }
 
 }

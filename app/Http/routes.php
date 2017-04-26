@@ -135,7 +135,7 @@ Route::group(['prefix'=>'admin/panel','middleware'=>'auth'], function (){
 //Fin clave de desbloqueo de campos
 
 //tipos de solicitudes
-Route::group(['prefix' => 'solicitudes','middleware' => 'auth'],function (){
+Route::group(['prefix' => 'solicitudes'],function (){
 
     Route::get('listar',[
             'uses' => 'TiposSolicitud@index',
@@ -267,9 +267,9 @@ Route::group(['prefix' => 'solicitudes','middleware' => 'auth'],function (){
             'as' => 'ver-ayuda-inst'
         ]
     );
-    Route::get('ayuda/editar/{id}',[
-            'uses' => 'Ayudas@editarAyuda',
-            'as' => 'editar-ayuda'
+    Route::get('ayuda/editar/{id}/{tipo?}', [
+            'uses' => 'Ayudas@editar',
+            'as' => ('editar-ayuda')
         ]
     );
     Route::post('ayuda/editado',[
@@ -278,7 +278,7 @@ Route::group(['prefix' => 'solicitudes','middleware' => 'auth'],function (){
         ]
     );
 
-    Route::get('ayuda/editar/{id}',[
+    Route::get('ayuda/eliminar/{id}',[
             'uses' => 'Ayudas@eliminarAyuda',
             'as' => 'eliminar-ayuda'
         ]
@@ -299,26 +299,46 @@ Route::group(['prefix' => 'solicitudes','middleware' => 'auth'],function (){
             'as' => 'buscarAyuda-tipoSolicitud'
         ]
     );
-    Route::get('admin/ayudas/editar/{id}', [
-        'uses' => 'Ayudas@editar',
-        'as' => ('editar-ayuda')
-        ]
-    );
-    Route::get('admin/ayudasNoCne/editar/{id}', [
-            'uses' => 'Ayudas@editarNoCne',
-            'as' => ('editar-ayuda-inst')
-        ]
-    );
-    Route::get('admin/ayudasInst/editar/{id}', [
-            'uses' => 'Ayudas@editarInst',
-            'as' => ('editar-ayuda-inst')
-        ]
-    );
-    Route::get('admin/ayudasInst/editar/{id}', [
-            'uses' => 'Ayudas@editarInst',
-            'as' => ('editar-ayuda-inst')
-        ]
-    );
+
+    //eventos
+    Route::group(['prefix' => 'eventos'],function (){
+
+        Route::get('listar',[
+                'uses' => 'Eventos@index',
+                'as' => 'listar-eventos'
+            ]
+        );
+
+        Route::get('nuevo',[
+                'uses' => 'Eventos@nuevo',
+                'as' => 'nuevo-eventos'
+            ]
+        );
+
+        Route::post('guardar',[
+                'uses' => 'Eventos@guardar',
+                'as' => 'guardar-eventos'
+            ]
+        );
+
+        Route::get('editar/{id}',[
+                'uses' => 'Eventos@editar',
+                'as' => 'editar-eventos'
+            ]
+        );
+
+        Route::post('editado',[
+                'uses' => 'Eventos@editado',
+                'as' => 'editado-eventos'
+            ]
+        );
+
+        Route::get('eliminar/{id}',[
+                'uses' => 'Eventos@eliminar',
+                'as' => 'eliminar-eventos'
+            ]
+        );
+    });
 });
 
 

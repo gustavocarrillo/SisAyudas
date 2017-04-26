@@ -9,7 +9,7 @@
 @section('contenido')
     <div class="x_panel">
     {{--@include('admin.partials.error')--}}
-    @include('flash::message')
+    {{--@include('flash::message')--}}
     <div class="x_title">
         <h2>Busqueda de Solicitantes Registrados</h2>
         <div class="clearfix"></div>
@@ -137,6 +137,7 @@
                     @if(array_has(session('data'),'b_a'))
                         <th>Nº</th>
                         <th>Solicitante</th>
+                        <th>Evento</th>
                         <th>Tipo</th>
                         <th>Fecha de Recepción</th>
                         <th>Estatus</th>
@@ -192,6 +193,7 @@
                             <tr>
                                 <td>{{ $datos->id }}</td>
                                 <td><a href="{{ route('ver-ayuda',['id' => $datos->id]) }}">{{ strtoupper($datos->solicitante)}}</a></td>
+                                <td>{{ strtoupper($datos->evento) }}</td>
                                 <td>{{ strtoupper($datos->tipo) }}</td>
                                 <td>{{ strtoupper($datos->fecha) }}</td>
                                 <td>{{ strtoupper($datos->estatus) }}</td>
@@ -222,6 +224,7 @@
                             <tr>
                                 <td>{{ $datos->id }}</td>
                                 <td><a href="{{ route('ver-ayuda-nocne',['id' => $datos->id]) }}">{{ strtoupper($datos->solicitante)}}</a></td>
+                                <td>{{ strtoupper($datos->evento) }}</td>
                                 <td>{{ strtoupper($datos->tipo) }}</td>
                                 <td>{{ strtoupper($datos->fecha) }}</td>
                                 <td>{{ strtoupper($datos->estatus) }}</td>
@@ -252,6 +255,7 @@
                             <tr>
                                 <td>{{ $datos->id }}</td>
                                 <td><a href="{{ route('ver-ayuda-inst',['id' => $datos->id]) }}">{{ strtoupper($datos->solicitante)}}</a></td>
+                                <td>{{ strtoupper($datos->evento) }}</td>
                                 <td>{{ strtoupper($datos->tipo) }}</td>
                                 <td>{{ strtoupper($datos->fecha) }}</td>
                                 <td>{{ strtoupper($datos->estatus) }}</td>

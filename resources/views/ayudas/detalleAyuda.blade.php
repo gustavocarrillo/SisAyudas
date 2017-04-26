@@ -41,7 +41,7 @@
                             @if($dato->estatus == 'PENDIENTE')
                                 <div class="col-md-10"><span class="btn btn-sm btn-warning">{{ strtoupper($dato->estatus) }}</span></div>
                             @elseif($dato->estatus == 'NEGADA')
-                                <div class="col-md-10"><span class="btn btn-sm btn-danger">{{ strtoupper($dato->estatus) }}</span></>
+                                <div class="col-md-10"><span class="btn btn-sm btn-danger">{{ strtoupper($dato->estatus) }}</span></div>
                             @else
                                 <div class="col-md-10"><span class="btn btn-sm btn-success">{{ strtoupper($dato->estatus) }}</span></div>
                             @endif

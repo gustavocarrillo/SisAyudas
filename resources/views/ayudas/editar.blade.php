@@ -8,7 +8,7 @@
     @foreach($ayuda as $datos)
     <div class="x_title">
 
-        <h2>EDITAR AYUDA Nº:<strong> {{$datos->id}}</strong></h2>
+        <h2>EDITAR AYUDA Nº:<strong> {{ $datos->id }}</strong></h2>
 
         <div class="clearfix"></div>
     </div>
@@ -16,6 +16,9 @@
         <br>
         <form action="{{ route('editado-ayuda') }}" method="post" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
             <input type="hidden" name="id" value="{{ $datos->id }}">
+            <input type="hidden" name="id_solicitante" value="{{ $datos->solicitante_id }}">
+            <input type="hidden" name="tipo" value="{{ $tipo }}">
+            {{ csrf_field() }};
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Solicitante:
                 </label>
@@ -24,10 +27,21 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Evento:</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="evento" class="select2_group form-control" name="evento">
+                        <option value="">Seleccione...</option>
+                        @foreach($eventos as $evn)
+                            <option value="{{ $evn->id }}" @if($datos->evento == $evn->nombre) selected @endif>{{ strtoupper($evn->nombre) }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha de recepción:
                 </label>
                 <div class="col-md-2 col-sm-2 col-xs-4">
-                    <input type="text" id="fecha" name="fecha" value="{{ $datos->fecha }}" class="form-control col-md-5 col-xs-12" required="required" placeholder="Click Aqui" readonly>
+                    <input type="text" id="fecha" name="fecha" value="{{ date('d-m-Y', strtotime($datos->fecha)) }}" class="form-control col-md-5 col-xs-12" required="required" placeholder="Click Aqui" readonly>
                 </div>
             </div>
             <div class="form-group">
@@ -52,10 +66,9 @@
                 <div class="col-md-2 col-sm-2 col-xs-12">
                     <select id="estatus" class="form-control" name="estatus">
                         <option value="" selected>Seleccione...</option>
-                        <option value="">PENDIENTE</option>
-                        <option value="">APROBADA</option>
-                        <option value="">NEGADA</option>
-                        <option value="">ENTREGADA</option>
+                        @foreach($estatus as $v)
+                            <option value="{{ $v }}" @if($datos->estatus == $v ) selected @endif>{{ $v }}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>

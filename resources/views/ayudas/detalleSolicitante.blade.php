@@ -10,6 +10,9 @@
     <div class="x_panel">
         {{--@include('admin.partials.error')--}}
         @include('flash::message')
+        @if((session()->has('flash_notification.message')))
+            {{ Session::forget('flash_notification.message')}}
+        @endif
         <div class="x_title">
             {{-- dd($datos) --}}
             <h2>Detos del Solicitante</h2>
@@ -66,7 +69,6 @@
     </div>
     <div class="x_panel">
         {{--@include('admin.partials.error')--}}
-        @include('flash::message')
         <div class="x_title">
             {{-- dd($datos) --}}
             <h2>Ayudas Solicitidas</h2>
@@ -75,7 +77,7 @@
         <div class="x_content">
             <br>
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
-            <thead>
+                <thead>
                 <tr>
                     <th>Fecha</th>
                     <th>Tipo</th>
@@ -85,8 +87,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach($ayudas as $ayuda)
-                        <tr>
+                @foreach($ayudas as $ayuda)
+                    <tr>
                         <td>{{ strtoupper($ayuda->fecha) }}</td>
                         <td>{{ strtoupper($ayuda->tipo) }}</td>
                         @if($ayuda->estatus == 'PENDIENTE')
@@ -97,30 +99,29 @@
                             <td><span class="btn btn-sm btn-success">{{ strtoupper($ayuda->estatus) }}</span></td>
                         @endif
                         <td>{{ strtoupper($ayuda->procesada) }}</td>
-                        @if($tipo == 'nocne')
+                        @if($tipo == 'no cne')
                             <td style="text-align: center">
                                 <a href="{{ route('ver-ayuda-nocne', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-eye"></span></a>
-                                <a href="{{ route('ver-ayuda-nocne', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
+                                <a href="{{ route('editar-ayuda', [$ayuda->id,$tipo]) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
                                 <a href="{{ route('ver-ayuda-nocne', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-remove"></span></a>
                             </td>
                         @elseif($tipo == 'inst')
                             <td style="text-align: center">
                                 <a href="{{ route('ver-ayuda-inst', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-eye"></span></a>
-                                <a href="{{ route('ver-ayuda-inst', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
+                                <a href="{{ route('editar-ayuda', [$ayuda->id,$tipo]) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
                                 <a href="{{ route('ver-ayuda-inst', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-remove"></span></a>
                             </td>
                         @else
                             <td style="text-align: center">
                                 <a href="{{ route('ver-ayuda', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-eye"></span></a>
-                                <a href="{{ route('ver-ayuda', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
+                                <a href="{{ route('editar-ayuda', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
                                 <a href="{{ route('ver-ayuda', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-remove"></span></a>
                             </td>
                         @endif
-                        </tr>
-                    @endforeach
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
-
         </div>
     </div>
 @endsection

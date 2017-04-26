@@ -77,7 +77,6 @@
                         </select>
                     </div>
                 </div>
-
                 <div class="x_title">
                     <h2>Nueva Ayuda</h2>
                     <div class="clearfix"></div>
@@ -91,8 +90,19 @@
                     </div>
                     <div id="msj-success" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 alert alert-success" role="alert" style="display: none"></div>
                 </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Evento:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select id="evento" class="select2_group form-control" name="eventos">
+                                <option value="">Seleccione...</option>
+                                @foreach($eventos as $evn)
+                                    <option value="{{ $evn->id }}">{{ strtoupper($evn->nombre) }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Solicitudes</label>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Solicitudes:</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select class="select2_group form-control" name="solicitudes" id="solicitud">
                             @foreach($ts as $t)
@@ -102,7 +112,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Nescesidad: </label>
+                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Necesidad: </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <textarea name="necesidad" id="necesidad" class="form-control" rows="6"></textarea>
                     </div>
