@@ -8,7 +8,7 @@ class Solicitantenocne extends Model
 {
     protected $table = 'solicitantes_no_cne';
 
-    protected $fillable = ['nacionalidad','cedula','nombres','apellidos','telefonos','direccion','id_municipio','id_parroquia'];
+    protected $fillable = ['nacionalidad','cedula','nombres','apellidos','genero','telefonos','direccion','id_municipio','id_parroquia'];
 
     public function solicitudes()
     {

@@ -8,7 +8,7 @@ class Solicitante extends Model
 {
     protected $table = 'solicitantes';
 
-    protected $fillable = ['nacionalidad','cedula','nombres','apellidos','telefono','id_municipio','id_parroquia','id_centro'];
+    protected $fillable = ['nacionalidad','cedula','nombres','apellidos','genero','telefono','id_municipio','id_parroquia','id_centro'];
 
     public function solicitudes()
     {

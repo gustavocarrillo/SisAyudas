@@ -30,7 +30,7 @@ class Eventos extends Controller
 
         $evento->nombre = strtoupper($request->nombre);
 
-        $evento->fecha = date('Y-m-d',strtotime($request->fecha));
+        $evento->fecha = $request->fecha;
 
         $evento->save();
 
@@ -77,8 +77,7 @@ class Eventos extends Controller
     private function validar(Request $request)
     {
         $this->validate($request,[
-            "nombre" => "required",
-            "fecha" => "required"
+            "nombre" => "required"
         ]);
     }
 }

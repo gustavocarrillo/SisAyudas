@@ -14,13 +14,6 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
             <input type="hidden" value="nocne" id="tipo">
             <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha de recepción:
-                </label>
-                <div class="col-md-2 col-sm-2 col-xs-4">
-                    <input type="text" id="fecha" name="fecha" value="" class="form-control col-md-5 col-xs-12" placeholder="Click Aqui" required="required" readonly>
-                </div>
-            </div>
-            <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Cedula:
                 </label>
 
@@ -46,6 +39,14 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <input type="text" id="apellidos" name="apellidos" value="" required="required" class="form-control col-md-7 col-xs-12">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Genero:</label>
+                <div class="col-md-6 col-sm-6 col-xs-12" style="margin-top: 7px">
+                    M
+                    <input type="radio" class="flat" name="genero" id="genero_m" value="M" checked="" required /> F
+                    <input type="radio" class="flat" name="genero" id="genero_f" value="F" />
                 </div>
             </div>
             <div class="form-group">
@@ -108,6 +109,13 @@
                                 <option value="{{ $evn->id }}">{{ strtoupper($evn->nombre) }}</option>
                             @endforeach
                         </select>
+                    </div>
+                </div>
+                <div class="form-group" id="fecha_cont" style="display: none">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha de recepción:
+                    </label>
+                    <div class="col-md-2 col-sm-2 col-xs-4">
+                        <input type="text" id="fecha" name="fecha" value="" class="form-control col-md-5 col-xs-12" placeholder="Click Aqui" required="required" readonly>
                     </div>
                 </div>
                 <div class="form-group">

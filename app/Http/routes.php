@@ -36,7 +36,7 @@ Route::group(['prefix' => '/'], function (){
     ]);
 
     Route::get('auth/logout', [
-        'middelware' => 'auth',
+        'middleware' => 'auth',
         'uses' => 'Auth\AuthController@salir',
         'as' => 'salir'
     ]);
@@ -78,13 +78,6 @@ Route::group(['prefix' => '/'], function (){
 
 });
 
-
-//busqueda en sisdata
-Route::post('sisdata/buscar',[
-        'uses' => 'solicitanteinscrito@buscar_solicitante',
-        'as' => 'sisdata-buscar'
-    ]
-);
 Route::group(['prefix'=>'admin/panel','middleware'=>'auth'], function (){
 
     //Ayudas persona natural inscritos y no inscritos
@@ -136,12 +129,6 @@ Route::group(['prefix'=>'admin/panel','middleware'=>'auth'], function (){
 
 //tipos de solicitudes
 Route::group(['prefix' => 'solicitudes'],function (){
-
-    Route::get('listar',[
-            'uses' => 'TiposSolicitud@index',
-            'as' => 'listar-solicitudes'
-        ]
-    );
 
     Route::get('listar',[
             'uses' => 'TiposSolicitud@index',
@@ -207,6 +194,11 @@ Route::group(['prefix' => 'solicitudes'],function (){
             'as' => 'solicitantes-cedula'
         ]
     );
+    Route::post('solicitantes/buscarSolicitantesPorGenero',[
+            'uses' => 'ListarSolicitantes@buscarSolicitantesPorGenero',
+            'as' => 'solicitantes-genero'
+        ]
+    );
     Route::post('solicitantes/buscarPorParroquia',[
             'uses' => 'ListarSolicitantes@buscarPorParroquia',
             'as' => 'solicitantes-parroquia'
@@ -233,7 +225,7 @@ Route::group(['prefix' => 'solicitudes'],function (){
 //Fin Listado de Solicitantes registrados
 
 //Detalle de solicitante
-    Route::get('solicitantes/{id}',[
+    Route::get('solicitantesCne/{id}',[
             'uses' => 'SolicitanteInscrito@solicitanteDetalle',
             'as' => 'solicitantes-detalle'
         ]
@@ -248,6 +240,18 @@ Route::group(['prefix' => 'solicitudes'],function (){
     Route::get('solicitantesInst/{id}',[
             'uses' => 'SolicitanteInstitucion@solicitanteDetalle',
             'as' => 'solicitantesInst-detalle'
+        ]
+    );
+
+    Route::get('detalles',[
+            function(){
+                if(session('datos')) {
+                    return view('ayudas.detalleSolicitante');
+                }
+
+                return redirect()->route('listar-solicitantes');
+            },
+            'as' => 'verDetalles'
         ]
     );
 
@@ -292,6 +296,11 @@ Route::group(['prefix' => 'solicitudes'],function (){
     Route::post('solicitantes/buscarTodasAyudas',[
             'uses' => 'Ayudas@todasAyudas',
             'as' => 'buscarAyuda-todas'
+        ]
+    );
+    Route::post('solicitantes/buscarAyudasPorGenero',[
+            'uses' => 'Ayudas@buscarAyudasPorGenero',
+            'as' => 'buscarAyuda-genero'
         ]
     );
     Route::post('solicitantes/porTipoSolicitud',[
@@ -339,6 +348,85 @@ Route::group(['prefix' => 'solicitudes'],function (){
             ]
         );
     });
+
+    Route::group(['prefix' => 'municipios'],function (){
+
+        Route::get('listar',[
+                'uses' => 'Municipios@index',
+                'as' => 'listar-municipios'
+            ]
+        );
+
+        Route::get('nueva',[
+                'uses' => 'Municipios@nueva',
+                'as' => 'nuevo-municipio'
+            ]
+        );
+
+        Route::post('guardar',[
+                'uses' => 'Municipios@guardar',
+                'as' => 'guardar-municipio'
+            ]
+        );
+
+        Route::get('editar/{id}',[
+                'uses' => 'Municipios@editar',
+                'as' => 'editar-municipio'
+            ]
+        );
+
+        Route::post('editado',[
+                'uses' => 'Municipios@editado',
+                'as' => 'editado-municipio'
+            ]
+        );
+
+        Route::get('eliminar/{id}',[
+                'uses' => 'Municipios@eliminar',
+                'as' => 'eliminar-municipio'
+            ]
+        );
+    });
+
+    Route::group(['prefix' => 'parroquias'],function (){
+
+        Route::get('listar',[
+                'uses' => 'Parroquias@index',
+                'as' => 'listar-parroquias'
+            ]
+        );
+
+        Route::get('nueva',[
+                'uses' => 'Parroquias@nueva',
+                'as' => 'nueva-parroquia'
+            ]
+        );
+
+        Route::post('guardar',[
+                'uses' => 'Parroquias@guardar',
+                'as' => 'guardar-parroquia'
+            ]
+        );
+
+        Route::get('editar/{id}',[
+                'uses' => 'Parroquias@editar',
+                'as' => 'editar-parroquia'
+            ]
+        );
+
+        Route::post('editado',[
+                'uses' => 'Parroquias@editado',
+                'as' => 'editado-parroquia'
+            ]
+        );
+
+        Route::get('eliminar/{id}',[
+                'uses' => 'Parroquias@eliminar',
+                'as' => 'eliminar-parroquia'
+            ]
+        );
+    });
+
 });
 
 

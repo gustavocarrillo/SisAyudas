@@ -67,26 +67,45 @@ class ListarSolicitantes extends Controller
    }
 
    public function buscarTodos(){
-    $solicitantes = $solicitante = DB::table('solicitantes')
-        ->join('municipios','solicitantes.id_municipio','=','municipios.id')
-        ->join('parroquias','solicitantes.id_parroquia','=','parroquias.id')
-        ->select('solicitantes.id as id',DB::raw('CONCAT(solicitantes.nacionalidad,"",solicitantes.cedula) as cedula'),DB::raw('CONCAT(solicitantes.nombres, " ",solicitantes.apellidos ) AS nombres'),'municipios.nombre as municipio','parroquias.nombre as parroquia')
-        ->get();
+        $solicitantes = $solicitante = DB::table('solicitantes')
+            ->join('municipios','solicitantes.id_municipio','=','municipios.id')
+            ->join('parroquias','solicitantes.id_parroquia','=','parroquias.id')
+            ->select('solicitantes.id as id',DB::raw('CONCAT(solicitantes.nacionalidad,"",solicitantes.cedula) as cedula'),DB::raw('CONCAT(solicitantes.nombres, " ",solicitantes.apellidos ) AS nombres'),'municipios.nombre as municipio','parroquias.nombre as parroquia')
+            ->get();
 
-    $solicitantesNoCne = DB::table('solicitantes_no_cne')
-        ->join('municipios','solicitantes_no_cne.id_municipio','=','municipios.id')
-        ->join('parroquias','solicitantes_no_cne.id_parroquia','=','parroquias.id')
-        ->select('solicitantes_no_cne.id as id',DB::raw('CONCAT(solicitantes_no_cne.nacionalidad,"",solicitantes_no_cne.cedula) as cedula'),DB::raw('CONCAT(solicitantes_no_cne.nombres," ",solicitantes_no_cne.apellidos) AS nombres'),'municipios.nombre as municipio','parroquias.nombre as parroquia')
-        ->get();
+        $solicitantesNoCne = DB::table('solicitantes_no_cne')
+            ->join('municipios','solicitantes_no_cne.id_municipio','=','municipios.id')
+            ->join('parroquias','solicitantes_no_cne.id_parroquia','=','parroquias.id')
+            ->select('solicitantes_no_cne.id as id',DB::raw('CONCAT(solicitantes_no_cne.nacionalidad,"",solicitantes_no_cne.cedula) as cedula'),DB::raw('CONCAT(solicitantes_no_cne.nombres," ",solicitantes_no_cne.apellidos) AS nombres'),'municipios.nombre as municipio','parroquias.nombre as parroquia')
+            ->get();
 
-    $instituciones = DB::table('solicitanteinst')
-        ->join('municipios','solicitanteinst.id_municipio','=','municipios.id')
-        ->join('parroquias','solicitanteinst.id_parroquia','=','parroquias.id')
-        ->select('solicitanteinst.id as id',DB::raw('CONCAT(solicitanteinst.tipo_reg,"",solicitanteinst.codigo_rif) as cedula'),'solicitanteinst.nombre as nombres','municipios.nombre as municipio','parroquias.nombre as parroquia')
-        ->get();
+        $instituciones = DB::table('solicitanteinst')
+            ->join('municipios','solicitanteinst.id_municipio','=','municipios.id')
+            ->join('parroquias','solicitanteinst.id_parroquia','=','parroquias.id')
+            ->select('solicitanteinst.id as id',DB::raw('CONCAT(solicitanteinst.tipo_reg,"",solicitanteinst.codigo_rif) as cedula'),'solicitanteinst.nombre as nombres','municipios.nombre as municipio','parroquias.nombre as parroquia')
+            ->get();
 
-    return redirect()->route('listar-solicitantes')->with('data',['solicitantes' => $solicitantes,'solicitantesNoCne' => $solicitantesNoCne,'instituciones' => $instituciones] )->with('resultados','BUSQUEDA POR TODOS');
-}
+        return redirect()->route('listar-solicitantes')->with('data',['solicitantes' => $solicitantes,'solicitantesNoCne' => $solicitantesNoCne,'instituciones' => $instituciones] )->with('resultados','BUSQUEDA POR TODOS');
+    }
+
+    public function buscarSolicitantesPorGenero(Request $request)
+    {
+        $solicitantes = $solicitante = DB::table('solicitantes')
+            ->join('municipios','solicitantes.id_municipio','=','municipios.id')
+            ->join('parroquias','solicitantes.id_parroquia','=','parroquias.id')
+            ->where('solicitantes.genero','=',$request->genero_s)
+            ->select('solicitantes.id as id',DB::raw('CONCAT(solicitantes.nacionalidad,"",solicitantes.cedula) as cedula'),DB::raw('CONCAT(solicitantes.nombres, " ",solicitantes.apellidos ) AS nombres'),'municipios.nombre as municipio','parroquias.nombre as parroquia')
+            ->get();
+
+        $solicitantesNoCne = DB::table('solicitantes_no_cne')
+            ->join('municipios','solicitantes_no_cne.id_municipio','=','municipios.id')
+            ->join('parroquias','solicitantes_no_cne.id_parroquia','=','parroquias.id')
+            ->where('solicitantes_no_cne.genero','=',$request->genero_s)
+            ->select('solicitantes_no_cne.id as id',DB::raw('CONCAT(solicitantes_no_cne.nacionalidad,"",solicitantes_no_cne.cedula) as cedula'),DB::raw('CONCAT(solicitantes_no_cne.nombres," ",solicitantes_no_cne.apellidos) AS nombres'),'municipios.nombre as municipio','parroquias.nombre as parroquia')
+            ->get();
+
+        return redirect()->route('listar-solicitantes')->with('data',['solicitantes' => $solicitantes,'solicitantesNoCne' => $solicitantesNoCne] )->with('resultados','BUSQUEDA DE SOLICITANTES POR GENERO');
+    }
 
     public function buscarPorParroquia(Request $request){
         $solicitantes = $solicitante = DB::table('solicitantes')

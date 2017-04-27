@@ -20,7 +20,7 @@
         </div>
         <div class="x_content">
             <div class="row">
-                    @foreach($datos as $dato)
+                    @foreach(session('datos') as $dato)
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-md-3"><strong>@if(isset($dato->codigo))Codigo: @else Cedula: @endif</strong></div>
@@ -87,7 +87,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($ayudas as $ayuda)
+
+                @foreach(session('ayudas') as $ayuda)
                     <tr>
                         <td>{{ strtoupper($ayuda->fecha) }}</td>
                         <td>{{ strtoupper($ayuda->tipo) }}</td>
@@ -99,16 +100,16 @@
                             <td><span class="btn btn-sm btn-success">{{ strtoupper($ayuda->estatus) }}</span></td>
                         @endif
                         <td>{{ strtoupper($ayuda->procesada) }}</td>
-                        @if($tipo == 'no cne')
+                        @if(session('tipo') == 'no cne')
                             <td style="text-align: center">
                                 <a href="{{ route('ver-ayuda-nocne', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-eye"></span></a>
-                                <a href="{{ route('editar-ayuda', [$ayuda->id,$tipo]) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
+                                <a href="{{ route('editar-ayuda', [$ayuda->id,session('tipo')]) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
                                 <a href="{{ route('ver-ayuda-nocne', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-remove"></span></a>
                             </td>
-                        @elseif($tipo == 'inst')
+                        @elseif(session('tipo') == 'inst')
                             <td style="text-align: center">
                                 <a href="{{ route('ver-ayuda-inst', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-eye"></span></a>
-                                <a href="{{ route('editar-ayuda', [$ayuda->id,$tipo]) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
+                                <a href="{{ route('editar-ayuda', [$ayuda->id,session('tipo')]) }}" class="btn btn-default"><span class="fa fa-edit"></span></a>
                                 <a href="{{ route('ver-ayuda-inst', $ayuda->id) }}" class="btn btn-default"><span class="fa fa-remove"></span></a>
                             </td>
                         @else

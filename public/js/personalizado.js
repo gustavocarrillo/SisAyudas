@@ -14,6 +14,16 @@ if($('#registro').val()=='true'){
     btn = '#modal_guardar';
 }
 
+$("#evento").change(function () {
+    var option = $('#evento option:selected').html().toString();
+
+    if( option != 'DESPACHO') {
+        $("#fecha_cont").hide();
+    }else{
+        $("#fecha_cont").show();
+    }
+})
+
 $(btn).click(function () {
 
     $('#errores').html('');
@@ -32,6 +42,13 @@ $(btn).click(function () {
     var cedula = $('#cedula').val();
     var nombres = $('#nombres').val();
     var apellidos = $('#apellidos').val();
+
+    var genero = $('#genero_m').val();
+
+    if($('#genero_f').prop('checked') == true){
+        genero = $('#genero_f').val();
+    }
+
     var direccion = $('#direccion').val();
     var tlfs = $('#telefonos').val();
     var municipio = $('#municipio').val();
@@ -54,6 +71,7 @@ $(btn).click(function () {
             cedula: cedula,
             nombres: nombres,
             apellidos: apellidos,
+            genero: genero,
             direccion: direccion,
             telefonos: tlfs,
             municipio: municipio,

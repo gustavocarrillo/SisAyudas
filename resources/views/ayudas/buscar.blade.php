@@ -36,6 +36,7 @@
                             <select name="opciones_s" id="opciones_s" class="form-control">
                                 <option value="todos" selected>Todos</option>
                                 <option value="cedula" >Cedula</option>
+                                <option value="genero" >Genero</option>
                                 <option value="codigo_rif" >Codigo o Rif</option>
                                 <option value="municipio" >Municipio</option>
                                 <option value="parroquia" >Parroquia</option>
@@ -53,6 +54,7 @@
                                 <option value="todas" selected>Todas</option>
                                 <option value="id" >Nº</option>
                                 <option value="tipoSolicitud">Tipo de Solicitud</option>
+                                <option value="genero" >Genero</option>
                             </select>
                         </div>
                     </div>
@@ -66,6 +68,12 @@
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="cedula">
                         <input type="text" name="cedula" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="genero_s">
+                        <select name="genero_s" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="codigo_rif">
                         <input type="text" name="codigo_rif" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
@@ -108,6 +116,12 @@
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="numero">
                         <input type="text" name="numero" required="required" class="form-control col-md-7 col-xs-12" placeholder="Numero aqui">
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="genero_a">
+                        <select name="genero_a" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -195,7 +209,7 @@
                                 <td><a href="{{ route('ver-ayuda',['id' => $datos->id]) }}">{{ strtoupper($datos->solicitante)}}</a></td>
                                 <td>{{ strtoupper($datos->evento) }}</td>
                                 <td>{{ strtoupper($datos->tipo) }}</td>
-                                <td>{{ strtoupper($datos->fecha) }}</td>
+                                <td>{{ date('d-m-Y',strtotime($datos->fecha)) }}</td>
                                 <td>{{ strtoupper($datos->estatus) }}</td>
                                 <td>{{ strtoupper($datos->procesada) }}</td>
                                 <td style="text-align: center">
@@ -226,7 +240,7 @@
                                 <td><a href="{{ route('ver-ayuda-nocne',['id' => $datos->id]) }}">{{ strtoupper($datos->solicitante)}}</a></td>
                                 <td>{{ strtoupper($datos->evento) }}</td>
                                 <td>{{ strtoupper($datos->tipo) }}</td>
-                                <td>{{ strtoupper($datos->fecha) }}</td>
+                                <td>{{ date('d-m-Y',strtotime($datos->fecha)) }}</td>
                                 <td>{{ strtoupper($datos->estatus) }}</td>
                                 <td>{{ strtoupper($datos->procesada) }}</td>
                                 <td style="text-align: center">
@@ -250,14 +264,14 @@
                             </tr>
                         @endforeach
                     @endif
-                    @if(array_has(session('data'),'instituciones_ayudas'))
-                        @foreach(array_get(session('data'),'instituciones_ayudas') as $datos)
+                    @if(array_has(session('data'),'instituciones-ayudas'))
+                        @foreach(array_get(session('data'),'instituciones-ayudas') as $datos)
                             <tr>
                                 <td>{{ $datos->id }}</td>
                                 <td><a href="{{ route('ver-ayuda-inst',['id' => $datos->id]) }}">{{ strtoupper($datos->solicitante)}}</a></td>
                                 <td>{{ strtoupper($datos->evento) }}</td>
                                 <td>{{ strtoupper($datos->tipo) }}</td>
-                                <td>{{ strtoupper($datos->fecha) }}</td>
+                                <td>{{ date('d-m-Y',strtotime($datos->fecha)) }}</td>
                                 <td>{{ strtoupper($datos->estatus) }}</td>
                                 <td>{{ strtoupper($datos->procesada) }}</td>
                                 <td style="text-align: center">
@@ -467,6 +481,11 @@
                 $('#centro').siblings().addClass('hidden');
                 $('#centro').fadeIn().removeClass('hidden')
             }
+            if(filtro == 'genero'){
+                $('#buscar_por').attr('action','buscarSolicitantesPorGenero');
+                $('#genero_s').siblings().addClass('hidden');
+                $('#genero_s').fadeIn().removeClass('hidden')
+            }
         })
         $('#opciones_a').change(function () {
             var filtro = $('#opciones_a').val();
@@ -485,6 +504,11 @@
                 $('#buscar_por').attr('action','porTipoSolicitud');
                 $('#tipoSolicitud_a').siblings().addClass('hidden');
                 $('#tipoSolicitud_a').fadeIn().removeClass('hidden')
+            }
+            if(filtro == 'genero'){
+                $('#buscar_por').attr('action','buscarAyudasPorGenero');
+                $('#genero_a').siblings().addClass('hidden');
+                $('#genero_a').fadeIn().removeClass('hidden')
             }
         })
         /** /Opciones campos de busqueda de solicitantes **/

@@ -22,6 +22,7 @@ class Ayudas extends Controller
     {
         if ($request->tipo_sol == 'siCne') {
             $ayuda = DB::table('solicitante_solicitud')
+                ->join('eventos', 'solicitante_solicitud.id_evento', '=', 'eventos.id')
                 ->join('solicitudes', 'solicitante_solicitud.solicitud_id', '=', 'solicitudes.id')
                 ->join('solicitantes', 'solicitantes.id', '=', 'solicitante_solicitud.solicitante_id')
                 ->where('solicitante_solicitud.id', '=', $request->numero)
@@ -31,7 +32,8 @@ class Ayudas extends Controller
                     'solicitante_solicitud.estatus as estatus',
                     'solicitante_solicitud.fecha_pro as procesada',
                     DB::raw('CONCAT(solicitantes.nombres," ",solicitantes.apellidos) as solicitante',
-                        'solicitantes.id as solicitante_id'))
+                        'solicitantes.id as solicitante_id'),
+                    'eventos.nombre as evento')
                 ->get();
 
             if (count($ayuda) > 0) {
@@ -43,6 +45,7 @@ class Ayudas extends Controller
 
         if ($request->tipo_sol == 'noCne') {
             $ayuda = DB::table('solicitantenocne_solicitud')
+                ->join('eventos', 'solicitantenocne_solicitud.id_evento', '=', 'eventos.id')
                 ->join('solicitudes', 'solicitantenocne_solicitud.solicitud_id', '=', 'solicitudes.id')
                 ->join('solicitantes_no_cne', 'solicitantes_no_cne.id', '=', 'solicitantenocne_solicitud.solicitantenocne_id')
                 ->where('solicitantenocne_solicitud.id', '=', $request->numero)
@@ -52,7 +55,8 @@ class Ayudas extends Controller
                     'solicitantenocne_solicitud.estatus as estatus',
                     'solicitantenocne_solicitud.fecha_pro as procesada',
                     DB::raw('CONCAT(solicitantes_no_cne.nombres," ",solicitantes_no_cne.apellidos) as solicitante',
-                        'solicitantes_no_cne.id as solicitante_id'))
+                        'solicitantes_no_cne.id as solicitante_id'),
+                    'eventos.nombre as evento')
                 ->get();
 
             if (count($ayuda) > 0) {
@@ -63,6 +67,7 @@ class Ayudas extends Controller
         }
         if ($request->tipo_sol == 'inst') {
             $ayuda = DB::table('solicitanteinst_solicitud')
+                ->join('eventos', 'solicitanteinst_solicitud.id_evento', '=', 'eventos.id')
                 ->join('solicitudes', 'solicitanteinst_solicitud.solicitud_id', '=', 'solicitudes.id')
                 ->join('solicitanteinst', 'solicitanteinst.id', '=', 'solicitanteinst_solicitud.solicitanteinst_id')
                 ->where('solicitanteinst_solicitud.id', '=', $request->numero)
@@ -72,12 +77,13 @@ class Ayudas extends Controller
                     'solicitanteinst_solicitud.estatus as estatus',
                     'solicitanteinst_solicitud.fecha_pro as procesada',
                     'solicitanteinst.nombre as solicitante',
-                    'solicitanteinst.id as solicitante_id')
+                    'solicitanteinst.id as solicitante_id',
+                    'eventos.nombre as evento')
                 ->get();
 
             if (count($ayuda) > 0) {
                 return redirect()->route('listar-solicitantes')
-                    ->with('data', ['instituciones_ayudas' => $ayuda, 'ruta' => 'ver-ayuda-inst', 'b_a' => ''])
+                    ->with('data', ['instituciones-ayudas' => $ayuda, 'ruta' => 'ver-ayuda-inst', 'b_a' => ''])
                     ->with('resultados', 'BUSQUEDA POR ID');
             }
         }
@@ -135,7 +141,6 @@ class Ayudas extends Controller
 
     public function verAyuda($id)
     {
-
         $ayuda = DB::table('solicitante_solicitud')
             ->join('solicitudes', 'solicitante_solicitud.solicitud_id', '=', 'solicitudes.id')
             ->join('solicitantes', 'solicitante_solicitud.solicitante_id', '=', 'solicitantes.id')
@@ -331,6 +336,41 @@ class Ayudas extends Controller
         return $ayuda;
     }
 
+    public function buscarAyudasPorGenero(Request $request)
+    {
+        $ayudas = DB::table('solicitante_solicitud')
+            ->join('eventos', 'solicitante_solicitud.id_evento', '=', 'eventos.id')
+            ->join('solicitudes', 'solicitante_solicitud.solicitud_id', '=', 'solicitudes.id')
+            ->join('solicitantes', 'solicitantes.id', '=', 'solicitante_solicitud.solicitante_id')
+            ->where('solicitantes.genero','=',$request->genero_a)
+            ->select('solicitudes.nombre as tipo',
+                'solicitante_solicitud.id as id',
+                'solicitante_solicitud.fecha as fecha',
+                'solicitante_solicitud.estatus as estatus',
+                'solicitante_solicitud.fecha_pro as procesada',
+                DB::raw('CONCAT(solicitantes.nombres," ",solicitantes.apellidos) as solicitante',
+                    'solicitantes.id as solicitante_id'),
+                'eventos.nombre as evento')
+            ->get();
+
+        $ayudasNoCne = DB::table('solicitantenocne_solicitud')
+            ->join('solicitudes', 'solicitantenocne_solicitud.solicitud_id', '=', 'solicitudes.id')
+            ->join('eventos', 'solicitantenocne_solicitud.id_evento', '=', 'eventos.id')
+            ->join('solicitantes_no_cne', 'solicitantes_no_cne.id', '=', 'solicitantenocne_solicitud.solicitantenocne_id')
+            ->where('solicitantes_no_cne.genero','=',$request->genero_a)
+            ->select('solicitudes.nombre as tipo',
+                'solicitantenocne_solicitud.id as id',
+                'solicitantenocne_solicitud.fecha as fecha',
+                'solicitantenocne_solicitud.estatus as estatus',
+                'solicitantenocne_solicitud.fecha_pro as procesada',
+                DB::raw('CONCAT(solicitantes_no_cne.nombres," ",solicitantes_no_cne.apellidos) as solicitante',
+                    'solicitantes_no_cne.id as solicitante_id'),
+                'eventos.nombre as evento')
+            ->get();
+
+        return redirect()->route('listar-solicitantes')->with('data', ['solicitantes-ayudas' => $ayudas, 'solicitantesnocne-ayudas' => $ayudasNoCne, 'b_a' => ''])->with('resultados', 'BUSQUEDA AYUDAS POR GENERO');
+    }
+
     public function editado(Request $request)
     {
         $ss = 'App\Solicitante'.strtolower(camel_case($request->tipo)).'Solicitud';
@@ -368,4 +408,5 @@ class Ayudas extends Controller
 
         return $controller->solicitanteDetalle($id);
     }
+
 }

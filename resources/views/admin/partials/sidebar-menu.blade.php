@@ -23,6 +23,18 @@
                     <li><a href="{{ route('listar-solicitudes')  }}">Ver Tipos de Solicitud</a></li>
                 </ul>
             </li>
+            <li><a><i class="fa fa-map-marker"></i>Municipios</a>
+                <ul class="nav child_menu">
+                    <li><a href="{{ route('nuevo-municipio') }}">Nuevo Municipio</a></li>
+                    <li><a href="{{ route('listar-municipios')  }}">Ver Municipios</a></li>
+                </ul>
+            </li>
+            <li><a><i class="fa fa-sitemap"></i>Parroquias</a>
+                <ul class="nav child_menu">
+                    <li><a href="{{ route('nueva-parroquia') }}">Nueva Parroquia</a></li>
+                    <li><a href="{{ route('listar-parroquias')  }}">Ver Parroquias</a></li>
+                </ul>
+            </li>
             {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="form.html">General Form</a></li>

@@ -41,6 +41,7 @@ class SolicitanteNoInscrito extends Controller
             $solicitante->cedula = $request->cedula;
             $solicitante->nombres = $request->nombres;
             $solicitante->apellidos = $request->apellidos;
+            $solicitante->genero = $request->genero;
             $solicitante->telefono = $request->telefonos;
             $solicitante->direccion = $request->direccion;
             $solicitante->id_municipio = $request->municipio;
@@ -92,7 +93,10 @@ class SolicitanteNoInscrito extends Controller
 
     public function solicitanteDetalle($id)
     {
-        return view('ayudas.detalleSolicitante',['datos' => $this->getDatosSolicitante($id),'ayudas' => $this->getAyudas($id),'tipo'=>'no cne']);
+        return redirect()->route('verDetalles')
+            ->with('datos',$this->getDatosSolicitante($id))
+            ->with('ayudas',$this->getAyudas($id))
+            ->with('tipo','no cne');
     }
 
     public function getDatosSolicitante($id)

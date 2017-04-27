@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Ayudas;
 use App\Solicitanteinst;
 use App\Solicitud;
 use Faker\Provider\cs_CZ\DateTime;
@@ -17,6 +18,7 @@ use App\Solicitante as Solicitante;
 use App\Centro as Centro;
 use App\Firmante;
 use Illuminate\Support\Facades\DB;
+use App\Evento;
 
 class SolicitanteInscrito extends Controller
 {
@@ -31,18 +33,7 @@ class SolicitanteInscrito extends Controller
      */
     public function guardar_ayuda(Request $request){
 
-        $this->validate($request, [
-            'cedula' => 'numeric|min:199999|max:39999999|required',
-            'nombres' => 'min:3|max:50|required',
-            'apellidos' => 'min:3|max:50|required',
-            'telefono' => 'min:7|max:100',
-            'municipio' => 'min:3|max:50|required',
-            'parroquia' => 'min:3|max:50|required',
-            'centro' => 'min:3|max:150|required',
-            'evento' => 'required',
-            'solicitudes' => 'required',
-            'necesidad' => 'required',
-        ]);
+        $this->validar($request);
 
         $municipio =  Municipio::where('nombre',$request->municipio)->value('id');
         $parroquia = Parroquia::where('nombre',$request->parroquia)->value('id');
@@ -78,6 +69,7 @@ class SolicitanteInscrito extends Controller
             $solicitante->cedula = $request->cedula;
             $solicitante->nombres = $request->nombres;
             $solicitante->apellidos = $request->apellidos;
+            $solicitante->genero = $request->genero;
             $solicitante->telefono = $request->telefonos;
             $solicitante->direccion = $request->direccion;
             $solicitante->id_municipio = (!is_null($municipio)) ? $municipio : Municipio::where('nombre',$request->municipio)->value('id');
@@ -90,7 +82,13 @@ class SolicitanteInscrito extends Controller
         $solicitante = Solicitante::find($sol_id);
         $intervalo = Solicitud::find($request->solicitudes);
 
+        $evento = Evento::find($request->evento);
+
         $fecha = ($request->fecha == '') ? 'DESCONOCIDA' : $request->fecha;
+
+        if($evento->nombre != "DESPACHO") {
+            $fecha = $evento->fecha;
+        }
 
         //verificamos si existen ayudas pendientes del mismo tipo
         $solicitudes_pendientes = $solicitante->solicitudes()
@@ -125,8 +123,16 @@ class SolicitanteInscrito extends Controller
         }
     }
 
-    public function solicitanteDetalle($id){
+    public function solicitanteDetalle($id)
+    {
+        return redirect()->route('verDetalles')
+            ->with('datos',$this->getDatosSolicitante($id))
+            ->with('ayudas',$this->getAyudas($id))
+            ->with('tipo','');
+    }
 
+    public function getDatosSolicitante($id)
+    {
         $solicitante = DB::table('solicitantes')
             ->join('municipios','solicitantes.id_municipio','=','municipios.id')
             ->join('parroquias','solicitantes.id_parroquia','=','parroquias.id')
@@ -142,13 +148,18 @@ class SolicitanteInscrito extends Controller
                 'centros.nombre as centro')
             ->get();
 
+        return $solicitante;
+    }
+
+    public function getAyudas($id)
+    {
         $ayudas = DB::table('solicitante_solicitud')
             ->join('solicitudes','solicitante_solicitud.solicitud_id','=','solicitudes.id')
             ->where('solicitante_solicitud.solicitante_id','=',$id)
             ->select('solicitudes.nombre as tipo','solicitante_solicitud.id as id','solicitante_solicitud.fecha as fecha','solicitante_solicitud.estatus as estatus','solicitante_solicitud.fecha_pro as procesada')
             ->get();
 
-        return view('ayudas.detalleSolicitante',['datos' => $solicitante,'ayudas' => $ayudas,'tipo'=>'']);
+        return $ayudas;
     }
 
     public function diferencia_dias($intervalo,$fecha){
@@ -167,5 +178,21 @@ class SolicitanteInscrito extends Controller
         }
 
         return true;
+    }
+
+    private function validar(Request $request)
+    {
+        $this->validate($request, [
+            'cedula' => 'numeric|min:199999|max:39999999|required',
+            'nombres' => 'min:3|max:50|required',
+            'apellidos' => 'min:3|max:50|required',
+            'telefono' => 'min:7|max:100',
+            'municipio' => 'min:3|max:50|required',
+            'parroquia' => 'min:3|max:50|required',
+            'centro' => 'min:3|max:150|required',
+            'evento' => 'required',
+            'solicitudes' => 'required',
+            'necesidad' => 'required',
+        ]);
     }
 }

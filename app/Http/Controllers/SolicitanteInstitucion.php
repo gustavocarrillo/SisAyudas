@@ -107,6 +107,14 @@ class SolicitanteInstitucion extends Controller
 
     public function solicitanteDetalle($id){
 
+        return redirect()->route('verDetalles')
+            ->with('datos',$this->getDatosSolicitante($id))
+            ->with('ayudas',$this->getAyudas($id))
+            ->with('tipo','inst');
+    }
+
+    public function getDatosSolicitante($id)
+    {
         $solicitante = DB::table('solicitanteinst')
             ->join('municipios','solicitanteinst.id_municipio','=','municipios.id')
             ->join('parroquias','solicitanteinst.id_parroquia','=','parroquias.id')
@@ -119,6 +127,11 @@ class SolicitanteInstitucion extends Controller
                 'parroquias.nombre as parroquia')
             ->get();
 
+        return $solicitante;
+    }
+
+    public function getAyudas($id)
+    {
         $ayudas = DB::table('solicitanteinst_solicitud')
             ->join('solicitudes','solicitanteinst_solicitud.solicitud_id','=','solicitudes.id')
             ->where('solicitanteinst_solicitud.solicitanteinst_id','=',$id)
@@ -129,6 +142,6 @@ class SolicitanteInstitucion extends Controller
                 'solicitanteinst_solicitud.fecha_pro as procesada')
             ->get();
 
-        return view('ayudas.detalleSolicitante',['datos' => $solicitante,'ayudas' => $ayudas,'tipo'=>'inst']);
+        return $ayudas;
     }
 }
