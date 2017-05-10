@@ -8,7 +8,7 @@ class Solicitante extends Model
 {
     protected $table = 'solicitantes';
 
-    protected $fillable = ['nacionalidad','cedula','nombres','apellidos','genero','telefono','id_municipio','id_parroquia','id_centro'];
+    protected $fillable = ['nacionalidad','cedula','nombres','apellidos','genero','telefono','id_municipio','id_parroquia','id_centro','id_discapacidad','discap_detalle'];
 
     public function solicitudes()
     {
@@ -28,6 +28,11 @@ class Solicitante extends Model
     public function centro()
     {
         return $this->belongsTo('App\Centro');
+    }
+
+    public function discapacidad()
+    {
+        return $this->belongsTo('App\Discapacidad');
     }
 
 }

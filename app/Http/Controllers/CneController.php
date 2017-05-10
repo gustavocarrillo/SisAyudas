@@ -13,6 +13,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Solicitante;
 use App\Evento;
+use App\Discapacidad;
 
 use Validator;
 
@@ -64,6 +65,8 @@ class CneController extends Controller
             $eventos = Evento::all();
             $municipios = Municipio::all();
             $parroquias = Parroquia::all();
+            $discapacidades = Discapacidad::all();
+
             flash('NO REGISTRADO EN EL CNE','warning');
             return redirect()->route('ayudas-naturales')
                 ->with('data',array('datos' =>$info))
@@ -71,6 +74,7 @@ class CneController extends Controller
                 ->with('municipios',$municipios)
                 ->with('parroquias',$parroquias)
                 ->with('eventos',$eventos)
+                ->with('discapacidades',$discapacidades)
                 ->with('firma',$firmante)
                 ->with('existe',$existe)
                 ->with('hide',$visibilidad);
@@ -146,6 +150,8 @@ class CneController extends Controller
 
         $ts = TS::all();
         $eventos = Evento::all();
+        $discapacidades = Discapacidad::all();
+
 
         // Flujo Normal cuando solo esta registrado en el CNE y no es Miembro de Mesa
         if ($rows2 > 0 AND $rows2 <= 10) {
@@ -163,6 +169,7 @@ class CneController extends Controller
                 ->with('data',array('datos' =>$datos))
                 ->with('ts',$ts)
                 ->with('eventos',$eventos)
+                ->with('discapacidades',$discapacidades)
                 ->with('firma',$firmante)
                 ->with('existe',$existe)
                 ->with('visibilidad',$visibilidad);

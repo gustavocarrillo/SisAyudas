@@ -18,14 +18,14 @@
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="cedula">Cedula: <span class="required">*</span>
                     </label>
-                    <div class="col-md-1 col-sm-1 col-xs-1">
+                    <div class="col-md-2 col-sm-3 col-xs-3">
                         <select name="nac" id="" class="form-control">
                             <option value="V" selected>V</option>
                             <option value="E">E</option>
                         </select>
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <input type="text" name="cne_ci" required="required" class="form-control col-md-7 col-xs-12">
+                    <div class="col-md-2 col-sm-4 col-xs-4">
+                        <input type="text" name="cne_ci" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="ln_solid"></div>

@@ -16,16 +16,9 @@
             <form data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
                 <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha de recepción:
-                    </label>
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <input type="text" id="fecha" name="fecha" value="" class="form-control col-md-5 col-xs-12" required="required" placeholder="Click Aqui"  readonly>
-                    </div>
-                </div>
-                <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Codigo / Rif:
                     </label>
-                    <div class="col-md-1 col-sm-1 col-xs-1">
+                    <div class="col-md-2 col-sm-2 col-xs-2">
                         <select name="tipo_reg" id="tipo_reg" class="form-control">
                             <option value="J" selected>J</option>
                             <option value="C">C</option>
@@ -41,6 +34,26 @@
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" id="nombre" name="nombre" value=""class="form-control col-md-7 col-xs-12"  required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Responsable:
+                    </label>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <input type="text" id="responsable" name="responsable" value=""class="form-control"  required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nac">Responsable C.I:
+                    </label>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <select name="re_nac" id="re_nac" class="form-control">
+                            <option value="V" selected>V</option>
+                            <option value="E">E</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <input type="text" id="responsable" name="responsable" value=""class="form-control"  required="required">
                     </div>
                 </div>
                 <div class="form-group">
@@ -93,12 +106,19 @@
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Evento:</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select id="evento" class="select2_group form-control" name="eventos">
+                            <select id="evento" class="select2_group form-control" name="evento">
                                 <option value="">Seleccione...</option>
                                 @foreach($eventos as $evn)
                                     <option value="{{ $evn->id }}">{{ strtoupper($evn->nombre) }}</option>
                                 @endforeach
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group " id="fecha_cont">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha de recepción:
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-4">
+                            <input type="text" id="fecha" name="fecha" value="" class="form-control col-md-5 col-xs-12" required="required" placeholder="Click Aqui"  readonly>
                         </div>
                     </div>
                 <div class="form-group">
@@ -124,8 +144,8 @@
                     </div>
                 </div>
             </form>
+            </div>
         </div>
-    </div>
 @endsection
 
 @section('js')

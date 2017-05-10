@@ -25,7 +25,7 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Intervalo:
                     </label>
                     </label>
-                    <div class="col-md-1 col-sm-1 col-xs-1">
+                    <div class="col-md-2 col-sm-1 col-xs-1">
                         <input type="text" id="intervalo" name="intervalo" value="{{ $tsol->intervalo }}" class="form-control col-md-7 col-xs-12" maxlength="3" required="required">
                     </div>
                 </div>

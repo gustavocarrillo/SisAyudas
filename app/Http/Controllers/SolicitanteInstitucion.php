@@ -57,6 +57,9 @@ class SolicitanteInstitucion extends Controller
             $solicitante->tipo_reg = $request->tipo_reg;
             $solicitante->codigo_rif = $request->codigo_rif;
             $solicitante->nombre = strtoupper($request->nombre);
+            $solicitante->responsable = strtoupper($request->responsable);
+            $solicitante->re_nac = strtoupper($request->re_nac);
+            $solicitante->re_cedula = $request->re_cedula;
             $solicitante->telefono = $request->telefonos;
             $solicitante->direccion = strtoupper($request->direccion);
             $solicitante->id_municipio = $request->municipio;
@@ -105,6 +108,40 @@ class SolicitanteInstitucion extends Controller
 
     }
 
+    public function editar($id)
+    {
+        $solicitante = Solicitanteinst::find($id);
+        $municipios = Municipio::all();
+        $parroquias = Parroquia::all();
+
+        return view('ayudas.editarSolicitante')
+            ->with('solicitante',$solicitante)
+            ->with('municipios',$municipios)
+            ->with('parroquias',$parroquias)
+            ->with('tipo','Inst');
+    }
+
+    public function editado(Request $request)
+    {
+        $solicitante = Solicitanteinst::find($request->id);
+
+        $solicitante->tipo_reg = $request->tipo_reg;
+        $solicitante->codigo_rif = $request->codigo;
+        $solicitante->nombre = strtoupper($request->razon_social);
+        $solicitante->responsable = strtoupper($request->responsable);
+        $solicitante->re_cedula = $request->re_cedula;
+        $solicitante->telefono = $request->telefono;
+        $solicitante->direccion = strtoupper($request->direccion);
+        $solicitante->id_municipio = $request->municipio;
+        $solicitante->id_parroquia = $request->parroquia;
+
+        $solicitante->save();
+
+        flash('Datos modificados','success');
+
+        return $this->solicitanteDetalle($request->id);
+    }
+
     public function solicitanteDetalle($id){
 
         return redirect()->route('verDetalles')
@@ -119,10 +156,13 @@ class SolicitanteInstitucion extends Controller
             ->join('municipios','solicitanteinst.id_municipio','=','municipios.id')
             ->join('parroquias','solicitanteinst.id_parroquia','=','parroquias.id')
             ->where('solicitanteinst.id','=',$id)
-            ->select('solicitanteinst.nombre as nombres',
+            ->select('solicitanteinst.id as id',
+                     'solicitanteinst.nombre as nombres',
                 DB::raw('CONCAT(solicitanteinst.tipo_reg,"",solicitanteinst.codigo_rif) as codigo'),
                 'solicitanteinst.telefono',
                 'solicitanteinst.direccion',
+                'solicitanteinst.responsable',
+                DB::raw('CONCAT(solicitanteinst.re_nac,"",solicitanteinst.re_cedula) as re_cedula'),
                 'municipios.nombre as municipio',
                 'parroquias.nombre as parroquia')
             ->get();

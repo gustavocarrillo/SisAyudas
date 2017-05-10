@@ -15,58 +15,119 @@
         @endif
         <div class="x_title">
             {{-- dd($datos) --}}
-            <h2>Detos del Solicitante</h2>
+            <h2>Datos Personales</h2>
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
             <div class="row">
-                    @foreach(session('datos') as $dato)
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-3"><strong>@if(isset($dato->codigo))Codigo: @else Cedula: @endif</strong></div>
-                                <div class="col-md-10">@if(isset($dato->codigo)){{ $dato->codigo }}@else{{ $dato->cedula }} @endif</div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-5"><strong>@if(isset( $dato->apellidos )) Nombres y Apellidos: @else Razon Social: @endif</strong></div>
-                                <div class="col-md-10">@if(isset( $dato->apellidos )) {{ $dato->nombres.' '.$dato->apellidos }} @else {{ $dato->nombres }} @endif</div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-3"><strong>Telefono: </strong></div>
-                                <div class="col-md-10">{{ $dato->telefono }}</div>
-                            </div>
-                            <br>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-3"><strong>Dirección: </strong></div>
-                                <div class="col-md-10">{{ $dato->direccion }}</div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-2"><strong>Municipio: </strong></div>
-                                <div class="col-md-11">{{ $dato->municipio }}</div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-2"><strong>Parroquia: </strong></div>
-                                <div class="col-md-11">{{ $dato->parroquia }}</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            @if(isset($dato->centro))
-                                <div class="row">
-                                    <div class="col-md-5"><strong>Centro de Votación: </strong></div>
-                                    <div class="col-md-11">{{ $dato->centro }}</div>
-                                </div>
-                            @endif
-                        </div>
-                    @endforeach
+                @foreach(session('datos') as $dato)
+                    <div class="col-md-4 col-sm-4">
+                        <div class="col-md-12 col-sm-12"><strong>@if(isset($dato->codigo))RIF: @else Cedula: @endif</strong></div>
+                        <div class="col-md-12 col-sm-12">@if(isset($dato->codigo)){{ $dato->codigo }}@else{{ $dato->cedula }} @endif</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="col-md-12 col-sm-12"><strong>@if(isset( $dato->apellidos )) Nombres y Apellidos: @else Razon Social: @endif</strong></div>
+                        <div class="col-md-12 col-sm-12">@if(isset( $dato->apellidos )) {{ $dato->nombres.' '.$dato->apellidos }} @else {{ $dato->nombres }} @endif</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="col-md-12 col-sm-12"><strong>Telefono: </strong></div>
+                        <div class="col-md-12 col-sm-12">{{ $dato->telefono }}</div>
+                    </div>
+            </div>
+            <br>
+        </div>
+        @if(isset($dato->responsable))
+            <div class="x_title">
+                <h2>Datos del Responsable</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-4">
+                        <div class="col-md-12 col-sm-12"><strong>Nombre: </strong></div>
+                        <div class="col-md-12 col-sm-12">{{ $dato->responsable }}</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="col-md-12 col-sm-12"><strong>Cedula: </strong></div>
+                        <div class="col-md-12 col-sm-12">{{ $dato->re_cedula }}</div>
+                    </div>
                 </div>
+                <br>
+            </div>
+        @endif
+        <div class="x_title">
+            {{-- dd($datos) --}}
+            <h2>Datos de Ubicación</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="col-md-12 col-sm-12"><strong>Dirección: </strong></div>
+                    <div class="col-md-12 col-sm-12">{{ $dato->direccion }}</div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="col-md-12 col-sm-12"><strong>Municipio: </strong></div>
+                    <div class="col-md-12 col-sm-12">{{ $dato->municipio }}</div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="col-md-12 col-sm-12"><strong>Parroquia: </strong></div>
+                    <div class="col-md-12 col-sm-12">{{ $dato->parroquia }}</div>
+                </div>
+            </div>
+            <br>
+        </div>
 
+        @if(isset($dato->discapacidad))
+            <div class="x_title">
+                {{-- dd($datos) --}}
+                <h2>Datos de Discapacidad</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="col-md-12"><strong>Discapacidad: </strong></div>
+                        <div class="col-md-11">{{ $dato->discapacidad }}</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="col-md-12"><strong>Detalle de Discapacidad: </strong></div>
+                        <div class="col-md-11">{{ $dato->discap_detalle }}</div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        @endif
+
+
+        @if(isset($dato->centro))
+            <div class="x_title">
+                {{-- dd($datos) --}}
+                <h2>Datos Electorales</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="col-md-12 col-sm-12"><strong>Centro de Votación: </strong></div>
+                        <div class="col-md-12 col-sm-12">{{ $dato->centro }}</div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        @endif
+
+    </div>
+
+    <div class="x_panel">
+        <div class="x_content">
+            <div class="col-md-offset-4">
+                <a href="@if( isset($dato->codigo) ) {{ route('solicitantesInst-editar',$dato->id) }} @elseif(! isset($dato->centro) ) {{ route('solicitantesNoCne-editar',$dato->id) }} @else {{ route('solicitantes-editar',$dato->id) }} @endif" class="btn btn-primary btn-lg">Modificar Datos de Solicitante</a>
+            </div>
         </div>
     </div>
+    @endforeach
+
     <div class="x_panel">
         {{--@include('admin.partials.error')--}}
         <div class="x_title">
@@ -90,7 +151,7 @@
 
                 @foreach(session('ayudas') as $ayuda)
                     <tr>
-                        <td>{{ strtoupper($ayuda->fecha) }}</td>
+                        <td>{{ date('d-m-Y',strtotime($ayuda->fecha)) }}</td>
                         <td>{{ strtoupper($ayuda->tipo) }}</td>
                         @if($ayuda->estatus == 'PENDIENTE')
                             <td><span class="btn btn-sm btn-warning">{{ strtoupper($ayuda->estatus) }}</span></td>

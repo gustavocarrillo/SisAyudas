@@ -15,13 +15,13 @@
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre:
                     </label>
-                    <div class="col-md-3 col-sm-3 col-xs-8">
+                    <div class="col-md-5 col-sm-3 col-xs-8">
                         <input type="text" id="nombre" name="nombre" value="" class="form-control col-md-3 col-xs-6" required="required">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Municipio: </label>
-                    <div class=" col-md-3 col-sm-3 col-xs-12">
+                    <div class=" col-md-5 col-sm-3 col-xs-12">
                         <select class="select2_group form-control" name="municipio" id="municipio">
                             @foreach($municipios as $m)
                                 <option value="{{ $m->id }}">{{ strtoupper($m->nombre) }}</option>

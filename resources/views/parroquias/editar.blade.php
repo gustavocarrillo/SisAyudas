@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Municipio: </label>
-                    <div class=" col-md-3 col-sm-3 col-xs-12">
+                    <div class=" col-md-5 col-sm-3 col-xs-12">
                         <select class="select2_group form-control" name="municipio" id="municipio">
                             @foreach($municipios as $m)
                                 <option value="{{ $m->id }}" @if($m->id == $parroquia->id_municipio) selected @endif>{{ strtoupper($m->nombre) }}</option>

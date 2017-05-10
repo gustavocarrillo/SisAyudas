@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Plantilla sistema | @yield('titulo') </title>
+    <title>SisAyudas | @yield('titulo') </title>
 
     <!-- Bootstrap -->
     <link href="{{asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -25,8 +25,10 @@
     <link href="{{asset('vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.css')}}" rel="stylesheet">
+
     <!-- Espacio para agregar css personalizado en vistas -->
     @yield('head')
+
 </head>
 
 <body class="nav-md">
@@ -35,7 +37,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="{{ route('panel') }}" class="site_title"><span>Ayudas Economicas</span></a>
+                    <a href="{{ route('panel') }}" class="site_title"><span>SisAyudas</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -82,7 +84,7 @@
     <!-- footer content -->
     <footer>
         <div class="pull-right">
-            Plantilla - Modificada Gustavo Carrillo <a href="https://colorlib.com">Alcaldia</a>
+            Sistema de Ayudas <a href="https://colorlib.com">Alcaldia de Maturín</a>
         </div>
         <div class="clearfix"></div>
     </footer>

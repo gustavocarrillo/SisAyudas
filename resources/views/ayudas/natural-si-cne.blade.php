@@ -86,6 +86,31 @@
                     <input id="centro" value="{{ array_get(session('data'),'datos.centro') }}" class="form-control col-md-7 col-xs-12" type="text" name="centro" readonly>
                 </div>
             </div>
+
+        <div class="x_title">
+            <h2>Datos de Discapacidad</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="form-group">
+                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Discapacidad: </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="discapacidad" class="form-control col-md-7 col-xs-12" name="discapacidad">
+                        <option value="">Seleccione...</option>
+                        @foreach(session('discapacidades') as $disc)
+                            <option value="{{ $disc->id }}">{{ strtoupper($disc->discapacidad) }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Detalle: </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input id="discap_detalle" value="" class="form-control col-md-7 col-xs-12" type="text" name="discap_detalle">
+                </div>
+            </div>
+        </div>
+
         <div class="x_title">
             <h2>Nueva Ayuda</h2>
             <div class="clearfix"></div>

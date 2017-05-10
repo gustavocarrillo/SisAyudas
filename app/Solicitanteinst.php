@@ -8,7 +8,7 @@ class Solicitanteinst extends Model
 {
     protected $table = 'solicitanteinst';
 
-    protected $fillable = ['tipo_reg','codigo_rif','nombre','telefono','direccion','id_municipio','id_parroquia'];
+    protected $fillable = ['tipo_reg','codigo_rif','nombre','responsable','re_nac','re_cedula','telefono','direccion','id_municipio','id_parroquia'];
 
     public function municipio()
     {

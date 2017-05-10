@@ -231,9 +231,33 @@ Route::group(['prefix' => 'solicitudes'],function (){
         ]
     );
 
+    Route::get('solicitantesCne/editar/{id}',[
+            'uses' => 'SolicitanteInscrito@editar',
+            'as' => 'solicitantes-editar'
+        ]
+    );
+
+    Route::post('solicitantesCne/editado',[
+            'uses' => 'SolicitanteInscrito@editado',
+            'as' => 'solicitantes-editado'
+        ]
+    );
+
     Route::get('solicitantesNoCne/{id}',[
             'uses' => 'SolicitanteNoInscrito@solicitanteDetalle',
             'as' => 'solicitantesNoCne-detalle'
+        ]
+    );
+
+    Route::get('solicitantesNoCne/editar/{id}',[
+            'uses' => 'SolicitanteNoInscrito@editar',
+            'as' => 'solicitantesNoCne-editar'
+        ]
+    );
+
+    Route::post('solicitantesNoCne/editado',[
+            'uses' => 'SolicitanteNoInscrito@editado',
+            'as' => 'solicitantesNoCne-editado'
         ]
     );
 
@@ -243,9 +267,21 @@ Route::group(['prefix' => 'solicitudes'],function (){
         ]
     );
 
+    Route::get('solicitantesInst/editar/{id}',[
+            'uses' => 'SolicitanteInstitucion@editar',
+            'as' => 'solicitantesInst-editar'
+        ]
+    );
+
+    Route::post('solicitantesInst/editado',[
+            'uses' => 'SolicitanteInstitucion@editado',
+            'as' => 'solicitantesInst-editado'
+        ]
+    );
+
     Route::get('detalles',[
             function(){
-                if(session('datos')) {
+                if (session('datos')) {
                     return view('ayudas.detalleSolicitante');
                 }
 
@@ -254,6 +290,7 @@ Route::group(['prefix' => 'solicitudes'],function (){
             'as' => 'verDetalles'
         ]
     );
+
 
 //ayudas
     Route::get('ayuda/{id}',[
@@ -273,7 +310,7 @@ Route::group(['prefix' => 'solicitudes'],function (){
     );
     Route::get('ayuda/editar/{id}/{tipo?}', [
             'uses' => 'Ayudas@editar',
-            'as' => ('editar-ayuda')
+            'as' => 'editar-ayuda'
         ]
     );
     Route::post('ayuda/editado',[
@@ -427,6 +464,44 @@ Route::group(['prefix' => 'solicitudes'],function (){
         );
     });
 
+    Route::group(['prefix' => 'discapacidad'],function (){
+
+        Route::get('listar',[
+                'uses' => 'Discapacidades@index',
+                'as' => 'listar-discapacidad'
+            ]
+        );
+
+        Route::get('nueva',[
+                'uses' => 'Discapacidades@nueva',
+                'as' => 'nueva-discapacidad'
+            ]
+        );
+
+        Route::post('guardar',[
+                'uses' => 'Discapacidades@guardar',
+                'as' => 'guardar-discapacidad'
+            ]
+        );
+
+        Route::get('editar/{id}',[
+                'uses' => 'Discapacidades@editar',
+                'as' => 'editar-discapacidad'
+            ]
+        );
+
+        Route::post('editado',[
+                'uses' => 'Discapacidades@editado',
+                'as' => 'editado-discapacidad'
+            ]
+        );
+
+        Route::get('eliminar/{id}',[
+                'uses' => 'Discapacidades@eliminar',
+                'as' => 'eliminar-discapacidad'
+            ]
+        );
+    });
 });
 
 

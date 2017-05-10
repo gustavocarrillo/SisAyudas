@@ -19,6 +19,7 @@ use App\Centro as Centro;
 use App\Firmante;
 use Illuminate\Support\Facades\DB;
 use App\Evento;
+use App\Discapacidad;
 
 class SolicitanteInscrito extends Controller
 {
@@ -75,6 +76,8 @@ class SolicitanteInscrito extends Controller
             $solicitante->id_municipio = (!is_null($municipio)) ? $municipio : Municipio::where('nombre',$request->municipio)->value('id');
             $solicitante->id_parroquia = (!is_null($parroquia)) ? $parroquia : Parroquia::where('nombre',$request->parroquia)->value('id');
             $solicitante->id_centro = (!is_null($centro)) ? $centro : Centro::where('nombre',$request->centro)->value('id');
+            $solicitante->id_discapacidad = (! empty($request->id_discapacidad)) ? $request->id_discapacidad : null;
+            $solicitante->discap_detalle = (! empty($request->id_discapacidad)) ? strtoupper($request->discap_detalle) : null;
             $solicitante->save();
         }
 
@@ -123,6 +126,49 @@ class SolicitanteInscrito extends Controller
         }
     }
 
+    public function editar($id)
+    {
+        $solicitante = Solicitante::find($id);
+        $municipios = Municipio::all();
+        $parroquias = Parroquia::all();
+        $centros = Centro::all();
+        $discapacidades = Discapacidad::all();
+
+        return view('ayudas.editarSolicitante')
+            ->with('solicitante',$solicitante)
+            ->with('municipios',$municipios)
+            ->with('parroquias',$parroquias)
+            ->with('centros',$centros)
+            ->with('discapacidades',$discapacidades)
+            ->with('tipo','');
+    }
+
+    public function editado(Request $request)
+    {
+        $solicitante = Solicitante::find($request->id);
+
+        $solicitante->nacionalidad = $request->nac;
+        $solicitante->cedula = $request->cedula;
+        $solicitante->nombres = strtoupper($request->nombres);
+        $solicitante->apellidos = strtoupper($request->apellidos);
+        $solicitante->genero = $request->genero;
+        $solicitante->telefono = $request->telefono;
+        $solicitante->direccion = strtoupper($request->direccion);
+        $solicitante->id_municipio = $request->municipio;
+        $solicitante->id_parroquia = $request->parroquia;
+        $solicitante->id_centro = $request->centro;
+        $solicitante->id_discapacidad = (! empty($request->id_discapacidad)) ? $request->id_discapacidad : null;
+        $solicitante->discap_detalle = (! empty($request->id_discapacidad)) ? strtoupper($request->discap_detalle) : null;
+
+        $solicitante->save();
+
+        $ayudasCtr = new Ayudas();
+
+        flash('Datos modificados','success');
+
+        return $this->solicitanteDetalle($request->id);
+    }
+
     public function solicitanteDetalle($id)
     {
         return redirect()->route('verDetalles')
@@ -134,19 +180,42 @@ class SolicitanteInscrito extends Controller
     public function getDatosSolicitante($id)
     {
         $solicitante = DB::table('solicitantes')
+            ->join('discapacidades','solicitantes.id_discapacidad','=','discapacidades.id')
             ->join('municipios','solicitantes.id_municipio','=','municipios.id')
             ->join('parroquias','solicitantes.id_parroquia','=','parroquias.id')
             ->join('centros','solicitantes.id_centro','=','centros.id')
             ->where('solicitantes.id','=',$id)
-            ->select('solicitantes.nombres',
+            ->select('solicitantes.id',
+                'solicitantes.nombres',
                 'solicitantes.apellidos',
                 DB::raw('CONCAT(solicitantes.nacionalidad,"",solicitantes.cedula) as cedula'),
                 'solicitantes.telefono',
                 'solicitantes.direccion',
                 'municipios.nombre as municipio',
                 'parroquias.nombre as parroquia',
-                'centros.nombre as centro')
+                'centros.nombre as centro',
+                'discapacidades.discapacidad as discapacidad',
+                'solicitantes.discap_detalle as discap_detalle')
             ->get();
+
+        if (! $solicitante) {
+
+            $solicitante = DB::table('solicitantes')
+                ->join('municipios','solicitantes.id_municipio','=','municipios.id')
+                ->join('parroquias','solicitantes.id_parroquia','=','parroquias.id')
+                ->join('centros','solicitantes.id_centro','=','centros.id')
+                ->where('solicitantes.id','=',$id)
+                ->select('solicitantes.id',
+                    'solicitantes.nombres',
+                    'solicitantes.apellidos',
+                    DB::raw('CONCAT(solicitantes.nacionalidad,"",solicitantes.cedula) as cedula'),
+                    'solicitantes.telefono',
+                    'solicitantes.direccion',
+                    'municipios.nombre as municipio',
+                    'parroquias.nombre as parroquia',
+                    'centros.nombre as centro')
+                ->get();
+        }
 
         return $solicitante;
     }

@@ -11,6 +11,8 @@ use App\Solicitantenocne;
 use App\Solicitud;
 use App\Municipio as Municipio;
 use App\Parroquia as Parroquia;
+use App\Discapacidad;
+
 use App\Http\Controllers\SolicitanteInscrito as SOLI;
 use Illuminate\Support\Facades\DB;
 
@@ -46,6 +48,8 @@ class SolicitanteNoInscrito extends Controller
             $solicitante->direccion = $request->direccion;
             $solicitante->id_municipio = $request->municipio;
             $solicitante->id_parroquia = $request->parroquia;
+            $solicitante->id_discapacidad = $request->id_discapacidad;
+            $solicitante->discap_detalle= $request->discap_detalle;
             $solicitante->save();
         }
 
@@ -102,19 +106,78 @@ class SolicitanteNoInscrito extends Controller
     public function getDatosSolicitante($id)
     {
         $solicitante = DB::table('solicitantes_no_cne')
+            ->join('discapacidades','solicitantes_no_cne.id_discapacidad','=','discapacidades.id')
             ->join('municipios','solicitantes_no_cne.id_municipio','=','municipios.id')
             ->join('parroquias','solicitantes_no_cne.id_parroquia','=','parroquias.id')
             ->where('solicitantes_no_cne.id','=',$id)
-            ->select('solicitantes_no_cne.nombres',
+            ->select('solicitantes_no_cne.id',
+                'solicitantes_no_cne.nombres',
                 'solicitantes_no_cne.apellidos',
                 DB::raw('CONCAT(solicitantes_no_cne.nacionalidad,"",solicitantes_no_cne.cedula) as cedula'),
                 'solicitantes_no_cne.telefono',
                 'solicitantes_no_cne.direccion',
                 'municipios.nombre as municipio',
-                'parroquias.nombre as parroquia')
+                'parroquias.nombre as parroquia',
+                'discapacidades.discapacidad as discapacidad',
+                'solicitantes_no_cne.discap_detalle as discap_detalle')
             ->get();
 
+        if (! $solicitante) {
+
+            $solicitante = DB::table('solicitantes_no_cne')
+                ->join('municipios','solicitantes_no_cne.id_municipio','=','municipios.id')
+                ->join('parroquias','solicitantes_no_cne.id_parroquia','=','parroquias.id')
+                ->where('solicitantes_no_cne.id','=',$id)
+                ->select('solicitantes_no_cne.id',
+                    'solicitantes_no_cne.nombres',
+                    'solicitantes_no_cne.apellidos',
+                    DB::raw('CONCAT(solicitantes_no_cne.nacionalidad,"",solicitantes_no_cne.cedula) as cedula'),
+                    'solicitantes_no_cne.telefono',
+                    'solicitantes_no_cne.direccion',
+                    'municipios.nombre as municipio',
+                    'parroquias.nombre as parroquia')
+                ->get();
+        }
+
         return $solicitante;
+    }
+
+    public function editar($id)
+    {
+        $solicitante = Solicitantenocne::find($id);
+        $municipios = Municipio::all();
+        $parroquias = Parroquia::all();
+        $discapacidades = Discapacidad::all();
+
+        return view('ayudas.editarSolicitante')
+            ->with('solicitante',$solicitante)
+            ->with('municipios',$municipios)
+            ->with('parroquias',$parroquias)
+            ->with('discapacidades',$discapacidades)
+            ->with('tipo','NoCne');
+    }
+
+    public function editado(Request $request)
+    {
+        $solicitante = Solicitantenocne::find($request->id);
+
+        $solicitante->nacionalidad = $request->nac;
+        $solicitante->cedula = $request->cedula;
+        $solicitante->nombres = strtoupper($request->nombres);
+        $solicitante->apellidos = strtoupper($request->apellidos);
+        $solicitante->genero = $request->genero;
+        $solicitante->telefono = $request->telefono;
+        $solicitante->direccion = strtoupper($request->direccion);
+        $solicitante->id_municipio = $request->municipio;
+        $solicitante->id_parroquia = $request->parroquia;
+        $solicitante->id_discapacidad = (! empty($request->id_discapacidad)) ? $request->id_discapacidad : null;
+        $solicitante->discap_detalle = (! empty($request->id_discapacidad)) ? strtoupper($request->discap_detalle) : null;
+
+        $solicitante->save();
+
+        flash('Datos modificados','success');
+
+        return $this->solicitanteDetalle($request->id);
     }
 
     public function getAyudas($id)

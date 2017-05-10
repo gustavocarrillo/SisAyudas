@@ -9,16 +9,23 @@ class Municipio extends Model
     protected $table = 'municipios';
     protected $fillable = ['nombre'];
 
-    public function parroquias(){
+    public function parroquias()
+    {
         return $this->hasMany('App\Parroquia');
     }
-    public function centros(){
+
+    public function centros()
+    {
         return $this->hasMany('App\Centro');
     }
-    public function solicitantes(){
+
+    public function solicitantes()
+    {
         return $this->hasMany('App\Solicitante');
     }
-    public function solicitantesNoCne(){
+
+    public function solicitantesNoCne()
+    {
         return $this->hasMany('App\Solicitantenocne');
     }
 }

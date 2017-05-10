@@ -17,7 +17,7 @@ if($('#registro').val()=='true'){
 $("#evento").change(function () {
     var option = $('#evento option:selected').html().toString();
 
-    if( option != 'DESPACHO') {
+    if ( option != 'DESPACHO - GESTION SOCIAL') {
         $("#fecha_cont").hide();
     }else{
         $("#fecha_cont").show();
@@ -54,6 +54,8 @@ $(btn).click(function () {
     var municipio = $('#municipio').val();
     var parroquia = $('#parroquia').val();
     var centro = $('#centro').val();
+    var id_discapacidad = $('#discapacidad').val();
+    var discap_detalle = $('#discap_detalle').val();
     var evento = $('#evento').val();
     var solicitud = $('#solicitud').val();
     var necesidad = $('#necesidad').val();
@@ -77,6 +79,8 @@ $(btn).click(function () {
             municipio: municipio,
             parroquia: parroquia,
             centro: centro,
+            id_discapacidad: id_discapacidad,
+            discap_detalle: discap_detalle,
             evento: evento,
             solicitudes: solicitud,
             necesidad: necesidad
@@ -126,6 +130,9 @@ $('#guardar_inst').click(function () {
     var tipo_reg = $('#tipo_reg').val();
     var condigo_rif = $('#codigo_rif').val();
     var nombre = $('#nombre').val();
+    var responsable = $('#responsable').val();
+    var re_nac = $('#re_nac').val();
+    var re_cedula = $('#re_cedula').val();
     var direccion = $('#direccion').val();
     var tlfs = $('#telefonos').val();
     var municipio = $('#municipio').val();
@@ -145,6 +152,9 @@ $('#guardar_inst').click(function () {
             tipo_reg: tipo_reg,
             codigo_rif: condigo_rif,
             nombre: nombre,
+            reponsable: responsable,
+            re_nac: re_nac,
+            re_cedula: re_cedula,
             direccion: direccion,
             telefonos: tlfs,
             municipio: municipio,

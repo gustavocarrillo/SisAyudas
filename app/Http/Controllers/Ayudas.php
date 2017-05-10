@@ -262,7 +262,7 @@ class Ayudas extends Controller
 
         $estatus = ['PENDIENTE','APROBADA','NEGADA','ENTREGADA'];
 
-        return view('ayudas.editar')
+        return view('ayudas.editarAyuda')
             ->with('ayuda',$ayuda)
             ->with('estatus',$estatus)
             ->with('ts',$ts)

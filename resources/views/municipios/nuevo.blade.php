@@ -16,7 +16,7 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre:
                     </label>
                     </label>
-                    <div class="col-md-3 col-sm-3 col-xs-8">
+                    <div class="col-md-5 col-sm-3 col-xs-8">
                         <input type="text" id="nombre" name="nombre" value="" class="form-control col-md-3 col-xs-8" required="required">
                     </div>
                 </div>

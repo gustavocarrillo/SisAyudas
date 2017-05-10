@@ -19,9 +19,9 @@
         <form action="buscarTodos" id="buscar_por" method="post" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token" >
             <div class="form-group">
-                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="cedula">Busqueda Por: <span class="required">*</span>
+                <label class="control-label col-md-2 col-sm-3 col-xs-12" for="cedula">Busqueda Por: <span class="required">*</span>
                 </label>
-                <div class="col-md-2 col-sm-2 col-xs-4">
+                <div class="col-md-4 col-sm-6 col-xs-4">
                     <select name="buscar_selec" id="buscar_selec" class="form-control">
                         <option value="solicitante" selected>Solicitante</option>
                         <option value="ayuda" >Ayuda</option>
@@ -30,9 +30,9 @@
             </div>
             <div class="form-group">
                     <div class="" id="buscar_solicitante">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="opciones">Filtrar Por: <span class="required">*</span>
+                        <label class="control-label col-md-2 col-sm-3 col-xs-12" for="opciones">Filtrar Por: <span class="required">*</span>
                         </label>
-                        <div class="col-md-2 col-sm-2 col-xs-4">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                             <select name="opciones_s" id="opciones_s" class="form-control">
                                 <option value="todos" selected>Todos</option>
                                 <option value="cedula" >Cedula</option>
@@ -47,9 +47,9 @@
                         </div>
                     </div>
                     <div class="hidden" id="buscar_ayuda">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="opciones">Filtrar Por: <span class="required">*</span>
+                        <label class="control-label col-md-2 col-sm-3 col-xs-12" for="opciones">Filtrar Por: <span class="required">*</span>
                         </label>
-                        <div class="col-md-2 col-sm-2 col-xs-4">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
                             <select name="opciones_a" id="opciones_a" class="form-control">
                                 <option value="todas" selected>Todas</option>
                                 <option value="id" >Nº</option>
@@ -60,64 +60,64 @@
                     </div>
 
                 <div id="filtros_s">
-                    <div class="col-md-1 col-sm-2 col-xs-4 hidden" id="nac">
+                    <div class="col-md-2 col-sm-6 col-xs-4 hidden" id="nac">
                         <select name="nac" class="form-control">
                             <option value="v" selected>V</option>
                             <option value="e" >E</option>
                         </select>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="cedula">
-                        <input type="text" name="cedula" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
+                        <input type="text" name="cedula" required="required" class="form-control col-md-7 col-xs-12" placeholder="12345678">
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="genero_s">
+                    <div class="col-md-3 col-sm-6 col-xs-4 hidden" id="genero_s">
                         <select name="genero_s" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
                         </select>
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="codigo_rif">
+                    <div class="col-md-3 col-sm-2 col-xs-4 hidden" id="codigo_rif">
                         <input type="text" name="codigo_rif" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
                     </div>
-                    <div class="col-md-4 col-sm-2 col-xs-4 hidden" id="tipoSolicitante">
+                    <div class="col-md-5 col-sm-6 col-xs-4 hidden" id="tipoSolicitante">
                         <select type="text" name="solicitante" required="required" class="form-control col-md-7 col-xs-12">
                             <option>Inscritos en CNE</option>
                             <option>No Inscritos en CNE</option>
                             <option>Instituciones / Consejos Comunales</option>
                         </select>
                     </div>
-                    <div class="col-md-4 col-sm-2 col-xs-12 hidden" id="tipoSolicitud">
+                    <div class="col-md-5 col-sm-4 col-xs-12 hidden" id="tipoSolicitud">
                         <select type="text" name="solicitud" required="required" class="form-control col-md-7 col-xs-12">
                         </select>
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="municipio">
+                    <div class="col-md-5 col-sm-5 col-xs-4 hidden" id="municipio">
                         <select type="text" name="municipio" required="required" class="form-control col-md-7 col-xs-12">
                         </select>
                     </div>
-                    <div class="col-md-3 col-sm-2 col-xs-4 hidden" id="parroquia">
+                    <div class="col-md-5 col-sm-6 col-xs-4 hidden" id="parroquia">
                         <select type="text" name="parroquia" required="required" class="form-control col-md-7 col-xs-12">
                         </select>
                     </div>
-                    <div class="col-md-6 col-sm-2 col-xs-4 hidden" id="centro">
+                    <div class="col-md-5 col-sm-6 col-xs-4 hidden" id="centro">
                         <select type="text" name="centro" required="required" class="form-control col-md-7 col-xs-12">
                         </select>
                     </div>
                 </div>
                 <div id="filtros_a">
-                    <div class="col-md-4 col-sm-2 col-xs-12 hidden" id="tipoSolicitud_a">
+                    <div class="col-md-5 col-sm-6 col-xs-12 hidden" id="tipoSolicitud_a">
                         <select type="text" name="a_solicitud" required="required" class="form-control col-md-7 col-xs-12">
                         </select>
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="tipo_sol">
+                    <div class="col-md-3 col-sm-2 col-xs-4 hidden" id="tipo_sol">
                         <select name="tipo_sol" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
-                            <option value="siCne">Inscrito en CNE</option>
-                            <option value="noCne">No Inscrito en CNE</option>
+                            <option value="siCne">Inscrito</option>
+                            <option value="noCne">No Inscrito</option>
                             <option value="inst">Institución</option>
                         </select>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="numero">
-                        <input type="text" name="numero" required="required" class="form-control col-md-7 col-xs-12" placeholder="Numero aqui">
+                        <input type="text" name="numero" required="required" class="form-control col-md-7 col-xs-12" placeholder="1234...">
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-4 hidden" id="genero_a">
+                    <div class="col-md-3 col-sm-2 col-xs-4 hidden" id="genero_a">
                         <select name="genero_a" required="required" class="form-control col-md-7 col-xs-12" placeholder="escribe aqui">
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
