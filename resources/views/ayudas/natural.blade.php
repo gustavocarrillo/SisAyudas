@@ -13,10 +13,10 @@
         </div>
         <div class="x_content">
             <br>
-            <form action="{{ route('cne-buscar') }}" method="post" id="busqueda" data-parsley-validate="" class="form-horizontal form-label-left">
+            <form action="{{ route('buscar-solicitante') }}" method="post" id="busqueda" data-parsley-validate="" class="form-horizontal form-label-left">
                 {{ csrf_field() }}
                 <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="cedula">Cedula: <span class="required">*</span>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ci">Cedula: <span class="required">*</span>
                     </label>
                     <div class="col-md-2 col-sm-3 col-xs-3">
                         <select name="nac" id="" class="form-control">
@@ -25,7 +25,7 @@
                         </select>
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-4">
-                        <input type="text" name="cne_ci" required="required" class="form-control">
+                        <input type="text" name="ci" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="ln_solid"></div>
@@ -71,5 +71,7 @@
 @section('js')
     <script src={{ asset("vendors/select2/dist/js/select2.full.min.js") }}></script>
     <script src={{ asset("jquery-ui-custom/jquery-ui.js") }}></script>
+    <script src={{ asset("vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js") }}></script>
     <script src={{ asset("js/personalizado.js") }}></script>
+    <script src="{{ asset("js/natural-si-cne.js") }}" ></script>
 @endsection

@@ -80,9 +80,14 @@ Route::group(['prefix' => '/'], function (){
 
 Route::group(['prefix'=>'admin/panel','middleware'=>'auth'], function (){
 
+    Route:post('buscar-solicitante',[
+        'uses' => 'SolicitantesController@buscar',
+        'as'   => 'buscar-solicitante'
+    ]);
+
     //Ayudas persona natural inscritos y no inscritos
     Route::post('guardar-ayuda',[
-            'uses' => 'SolicitanteInscrito@guardar_ayuda',
+            'uses' => 'SolicitantesController@guardar',
             'as' => 'guardar-ayuda'
         ]
     );
@@ -501,6 +506,10 @@ Route::group(['prefix' => 'solicitudes'],function (){
                 'as' => 'eliminar-discapacidad'
             ]
         );
+    });
+
+    Route::get('tabs', function (){
+        return view('ayudas.tabs_base');
     });
 });
 

@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/resources/views/ayudas/detalleSolicitante.blade.php" line="29" />
-    <bookmark url="file://$PROJECT_DIR$/resources/views/ayudas/editarSolicitante.blade.php" line="182" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6c0ac01-f2ed-4bdf-b916-53a1e64c6833" name="Default" comment="" />
-    <ignored path="plaravel.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
+    <list default="true" id="a6c0ac01-f2ed-4bdf-b916-53a1e64c6833" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/fotos_user/14508391.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Ayudas.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Ayudas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/jquery-ui-custom/jquery-ui.css" afterPath="$PROJECT_DIR$/public/jquery-ui-custom/jquery-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/personalizado.js" afterPath="$PROJECT_DIR$/public/js/personalizado.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/ayudas/natural-si-cne.blade.php" afterPath="$PROJECT_DIR$/resources/views/ayudas/natural-si-cne.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/ayudas/natural.blade.php" afterPath="$PROJECT_DIR$/resources/views/ayudas/natural.blade.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,28 +26,73 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="plaravel" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ayudas.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Ayudas.php">
+      <file leaf-file-name="natural-si-cne.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural-si-cne.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="993">
-              <caret line="264" column="39" selection-start-line="264" selection-start-column="39" selection-end-line="264" selection-end-column="39" />
+            <state relative-caret-position="400">
+              <caret line="52" column="84" lean-forward="true" selection-start-line="52" selection-start-column="84" selection-end-line="52" selection-end-column="84" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="natural.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="natural-si-cne.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/natural-si-cne.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1728">
+              <caret line="108" column="33" lean-forward="true" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SolicitantesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitantesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SolicitanteInscrito.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitanteInscrito.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -45,70 +100,53 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>error</find>
+      <find>tele</find>
+      <find>msjs</find>
+      <find>hidde</find>
+      <find>none</find>
+      <find>cne</find>
+      <find>buscar-solicitante</find>
+      <find>natural</find>
+    </findStrings>
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="php artisan migrate:refresh" />
+      <command text="php artisan migrate:reset" />
+      <command text="php artisan migrate:rollback" />
+      <command text="php artisan migrate" />
+      <command text="php artisan config:cache" />
+    </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/eventos/nuevo.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/eventos/editar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/eventos/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Solicitud.php" />
-        <option value="$PROJECT_DIR$/app/SolicitanteSolicitud.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/detalleAyuda.blade.php" />
-        <option value="$PROJECT_DIR$/app/SolicitanteinstSolicitud.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/editar.blade.php" />
-        <option value="$PROJECT_DIR$/app/SolicitantenocneSolicitud.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Eventos.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ListarSolicitantes.php" />
-        <option value="$PROJECT_DIR$/resources/views/municipios/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/parroquias/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/municipios/editar.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Municipios.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Parroquias.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/natural.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/buscar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/solicitudes/nueva.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/solicitudes/editar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/municipios/nuevo.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/parroquias/editar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/parroquias/nuevo.blade.php" />
-        <option value="$PROJECT_DIR$/app/Solicitanteinst.php" />
-        <option value="$PROJECT_DIR$/resources/views/discapacidad/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/partials/sidebar-menu.blade.php" />
-        <option value="$PROJECT_DIR$/app/Municipio.php" />
-        <option value="$PROJECT_DIR$/app/Parroquia.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Discapacidad.php" />
-        <option value="$PROJECT_DIR$/resources/views/discapacidad/nuevo.blade.php" />
-        <option value="$PROJECT_DIR$/app/Discapacidad.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Discapacidades.php" />
-        <option value="$PROJECT_DIR$/resources/views/discapacidad/editar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/natural-si-cne.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CneController.php" />
+        <option value="$PROJECT_DIR$/app/MisHelpers.php" />
+        <option value="$PROJECT_DIR$/app/Http/MisHelpers.php" />
+        <option value="$PROJECT_DIR$/public/jquery-ui-custom/jquery-ui.css" />
         <option value="$PROJECT_DIR$/app/Solicitante.php" />
-        <option value="$PROJECT_DIR$/app/Solicitantenocne.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/natural-no-cne.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/instituciones.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/personalizado.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SolicitanteInscrito.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SolicitanteNoInscrito.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/editarSolicitante.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SolicitanteInstitucion.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_05_29_193508_create_estados_civiles.php" />
+        <option value="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_05_30_140708_create_solicitantes.php" />
+        <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Telefono.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_05_30_133325_create_telefonos_inst.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_05_31_150149_create_telefonos.php" />
+        <option value="$PROJECT_DIR$/public/js/natural-si-cne.js" />
+        <option value="$PROJECT_DIR$/resources/views/ayudas/natural-si-cne.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Ayudas.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/editarAyuda.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/ayudas/detalleSolicitante.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/plantilla/plantilla.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/partials/top-navigation.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/ayudas/natural.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SolicitantesController.php" />
       </list>
     </option>
   </component>
@@ -123,30 +161,11 @@
     </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpServers">
-    <servers>
-      <server host="localhost" id="be3482c2-7d75-4350-9bc1-79869f259675" name="localhost" port="8080" />
-      <server host="sisayudas.dev" id="c00a22d3-a91f-4727-94bb-3db56123f50f" name="sisayudas.dev" port="8080" />
-      <server host="localhost" id="9cf29e75-7aa5-4027-b501-ccf983ed77dd" name="localhost (1)" />
-      <server host="sisayudas.dev" id="31861bf7-2db9-4527-8dc4-c42ae26e559c" name="sisayudas.dev (1)" />
-    </servers>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <option name="y" value="1" />
+    <option name="width" value="1440" />
+    <option name="height" value="899" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -163,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,12 +189,6 @@
               <option name="myItemId" value="sisayudas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sisayudas" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
@@ -197,72 +209,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="solicitudes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="municipios" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="discapacidad" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,84 +231,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ayudas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plantilla" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sisayudas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="panel" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,31 +336,44 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="nuevo-discapacidad&#9;null&#9;null&#10;menu_toggle&#9;null&#9;null&#10;cors&#9;FILE&#9;file://C:/xampp/htdocs/plaravel/vendor/barryvdh/laravel-cors/config/cors.php&#10;plaravel&#9;FILE&#9;file://C:/xampp/htdocs/Alc-Presupuesto/.idea/plaravel.iml" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="SearchEverywhereHistoryKey" value="estados_civiles&#9;null&#9;null" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\plaravel\resources\views\auth" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\sisayudas\resources\views\ayudas" />
-      <recent name="C:\wamp64\www\sisayudas\resources\views" />
-      <recent name="C:\wamp64\www\sisayudas\app" />
-      <recent name="C:\wamp\www\SisAyudas\resources\views\solicitudes" />
-      <recent name="C:\xampp\htdocs\plaravel\resources\lang" />
-    </key>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -510,6 +391,10 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -520,7 +405,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
+      <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -549,123 +434,50 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a6c0ac01-f2ed-4bdf-b916-53a1e64c6833" name="Default" comment="" />
-      <created>1478875715685</created>
+      <created>1498066006924</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1478875715685</updated>
-      <workItem from="1478875719362" duration="15297000" />
-      <workItem from="1478956439518" duration="6683000" />
-      <workItem from="1479126325369" duration="15702000" />
-      <workItem from="1479153190975" duration="34380000" />
-      <workItem from="1479324123282" duration="1256000" />
-      <workItem from="1479386619675" duration="3096000" />
-      <workItem from="1479391511449" duration="2275000" />
-      <workItem from="1479394472460" duration="2862000" />
-      <workItem from="1479406036682" duration="14306000" />
-      <workItem from="1479821344882" duration="468000" />
-      <workItem from="1479824530848" duration="6732000" />
-      <workItem from="1479837896710" duration="4419000" />
-      <workItem from="1479911352608" duration="3230000" />
-      <workItem from="1480082126383" duration="59000" />
-      <workItem from="1480093169718" duration="3124000" />
-      <workItem from="1480422681826" duration="23252000" />
-      <workItem from="1480448121798" duration="24523000" />
-      <workItem from="1480598611174" duration="9377000" />
-      <workItem from="1480611773150" duration="13216000" />
-      <workItem from="1480948107440" duration="37111000" />
-      <workItem from="1481288373940" duration="17637000" />
-      <workItem from="1481546888813" duration="23433000" />
-      <workItem from="1481727213402" duration="10522000" />
-      <workItem from="1481814310965" duration="10186000" />
-      <workItem from="1481894539040" duration="17472000" />
-      <workItem from="1482160354319" duration="29427000" />
-      <workItem from="1482413626588" duration="15534000" />
-      <workItem from="1482770701506" duration="3666000" />
-      <workItem from="1482845968254" duration="21032000" />
-      <workItem from="1483020328149" duration="11117000" />
-      <workItem from="1483983504280" duration="8984000" />
-      <workItem from="1484242585917" duration="4792000" />
-      <workItem from="1484317734248" duration="3914000" />
-      <workItem from="1484591370336" duration="1632000" />
-      <workItem from="1484938835577" duration="1327000" />
-      <workItem from="1484926656127" duration="6615000" />
-      <workItem from="1485181285194" duration="61094000" />
-      <workItem from="1485879010040" duration="4041000" />
-      <workItem from="1486127230490" duration="6995000" />
-      <workItem from="1487008942967" duration="12965000" />
-      <workItem from="1490967769741" duration="5092000" />
-      <workItem from="1491225058525" duration="1345000" />
-      <workItem from="1491227141910" duration="11535000" />
-      <workItem from="1491333441646" duration="5956000" />
-      <workItem from="1491585562729" duration="1548000" />
-      <workItem from="1492444951217" duration="27710000" />
-      <workItem from="1492781803119" duration="3449000" />
-      <workItem from="1492783658923" duration="5665000" />
-      <workItem from="1493038981637" duration="8630000" />
-      <workItem from="1493136203148" duration="6466000" />
-      <workItem from="1493208417294" duration="33260000" />
-      <workItem from="1493750355218" duration="10939000" />
-      <workItem from="1493834563851" duration="4778000" />
-      <workItem from="1493902937434" duration="4422000" />
-      <workItem from="1493986639558" duration="8688000" />
-      <workItem from="1494003094801" duration="4609000" />
-      <workItem from="1494245732938" duration="18077000" />
+      <updated>1498066006924</updated>
+      <workItem from="1498066033115" duration="10417000" />
+      <workItem from="1498145742538" duration="2085000" />
+      <workItem from="1498226085724" duration="10546000" />
+      <workItem from="1498498580733" duration="3279000" />
+      <workItem from="1498582930716" duration="6539000" />
+      <workItem from="1498654394663" duration="3443000" />
+      <workItem from="1498658596211" duration="18187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="655922000" />
+    <option name="totallyTimeSpent" value="67600000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="0" y="1" width="1440" height="899" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26647565" sideWeight="0.50644565" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20416667" sideWeight="0.49355432" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19652778" sideWeight="0.49355432" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3694517" sideWeight="0.508596" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36875" sideWeight="0.508596" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.49713466" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.49713466" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3694517" sideWeight="0.491404" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -759,12 +571,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Ayudas.php</url>
-          <line>163</line>
+          <line>164</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Ayudas.php</url>
-          <line>95</line>
+          <line>96</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -774,12 +586,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Ayudas.php</url>
-          <line>182</line>
+          <line>183</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Ayudas.php</url>
-          <line>254</line>
+          <line>255</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -804,7 +616,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Ayudas.php</url>
-          <line>123</line>
+          <line>124</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -837,422 +649,382 @@
           <line>4</line>
           <option name="timeStamp" value="116" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/SolicitanteInscrito.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="117" />
+      <option name="time" value="122" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/municipios/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Techo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="128">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/parroquias/editar.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/ViviendaEstatus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="128">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/parroquias/nuevo.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Terreno.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="192">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/municipios/nuevo.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/ViviendaTipo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        <state relative-caret-position="128">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/solicitudes/editar.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_30_175009_create_solicitante_solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        <state relative-caret-position="256">
+          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/solicitudes/nueva.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_30_135017_create_solicitanteinst_solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="-256">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/tabs_base.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2210">
-          <caret line="171" column="38" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="38" />
+        <state relative-caret-position="192">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/municipios/editar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="49" selection-start-line="73" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/discapacidad/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+    <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Municipios.php">
+    <entry file="file://$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar/config/debugbar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="77" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="128">
+          <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/discapacidad/nuevo.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="106" selection-start-line="15" selection-start-column="106" selection-end-line="15" selection-end-column="106" />
+        <state relative-caret-position="-58">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Parroquia.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="208">
+          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Solicitanteinst.php">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="93" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
-          <folding />
+        <state relative-caret-position="358">
+          <caret line="205" column="52" lean-forward="false" selection-start-line="205" selection-start-column="52" selection-end-line="205" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/SolicitanteinstSolicitud.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural-si-cne-old.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SolicitantenocneSolicitud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SolicitanteSolicitud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Centro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="3952">
+          <caret line="247" column="22" lean-forward="true" selection-start-line="247" selection-start-column="22" selection-end-line="247" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="352">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Municipio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Discapacidad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Discapacidades.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Solicitante.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="169" selection-start-line="10" selection-start-column="134" selection-end-line="10" selection-end-column="169" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Solicitantenocne.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="170" selection-start-line="10" selection-start-column="170" selection-end-line="10" selection-end-column="170" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CneController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="false" />
-            <marker date="1493839285635" expanded="true" signature="1059:1067" ph="ó" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/discapacidad/editar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="118" selection-start-line="20" selection-start-column="118" selection-end-line="20" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/instituciones.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2601">
-          <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/personalizado.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/detalleAyuda.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="545" column="22" lean-forward="false" selection-start-line="545" selection-start-column="22" selection-end-line="545" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/cache/services.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EstadoCivil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ListarSolicitantes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="644" column="0" selection-start-line="644" selection-start-column="0" selection-end-line="644" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural-si-cne.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="104" column="18" selection-start-line="94" selection-start-column="11" selection-end-line="104" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural-no-cne.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="22" selection-start-line="19" selection-start-column="16" selection-end-line="24" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitanteNoInscrito.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitanteInscrito.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="169" column="5" selection-start-line="145" selection-start-column="3" selection-end-line="169" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#72#0#PHP" expanded="true" />
-            <element signature="e#5401#5957#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitanteInstitucion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-424">
-          <caret line="127" column="51" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="310" column="39" selection-start-line="310" selection-start-column="39" selection-end-line="310" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/editarSolicitante.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding>
-            <element signature="e#287#393#0#HTML" expanded="false" />
-            <element signature="e#421#444#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ayudas/detalleSolicitante.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="153" column="69" selection-start-line="153" selection-start-column="69" selection-end-line="153" selection-end-column="69" />
+        <state relative-caret-position="-3024">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/detalleAyuda.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-784">
+          <caret line="35" column="69" lean-forward="true" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/MisHelpers.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-711">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/jquery-ui-custom/jquery-ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Support/MessageProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Validation/Validator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="82" column="23" lean-forward="false" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
           <folding>
-            <marker date="1494337325485" expanded="true" signature="11013:13519" ph="..." />
-            <marker date="1494337325485" expanded="true" signature="12245:12443" ph="..." />
-            <marker date="1494337325485" expanded="true" signature="12339:12410" ph="..." />
-            <marker date="1494337325485" expanded="true" signature="13316:13467" ph="..." />
+            <element signature="e#52#80#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/sidebar-menu.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/MisHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+        <state relative-caret-position="128">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/personalizado.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_29_193508_create_estados_civiles.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_30_140708_create_solicitantes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="32" column="67" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_07_125301_create_grupos_familiares.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3786">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vendors/jquery.inputmask/.bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Solicitante.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/error.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Telefono.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/footer-buttons.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_30_133325_create_telefonos_inst.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_31_150149_create_telefonos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/foto.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="32">
+          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/mensajes.blade.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/aria.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="1067" column="22" lean-forward="false" selection-start-line="1067" selection-start-column="22" selection-end-line="1067" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/top-tiles.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/js/natural-si-cne.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1728">
+          <caret line="108" column="33" lean-forward="true" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/plantilla/plantilla.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        <state relative-caret-position="432">
+          <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/top-navigation.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="336">
+          <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/editarAyuda.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitanteInscrito.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+        <state relative-caret-position="336">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitantesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
           <folding>
-            <element signature="e#1214#1234#0#HTML" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Ayudas.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/ayudas/natural-si-cne.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="993">
-          <caret line="264" column="39" selection-start-line="264" selection-start-column="39" selection-end-line="264" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="400">
+          <caret line="52" column="84" lean-forward="true" selection-start-line="52" selection-start-column="84" selection-end-line="52" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

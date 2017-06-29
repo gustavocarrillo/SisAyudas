@@ -17,9 +17,8 @@ class CreateUsersTable extends Migration
             $table->string('nombre');
             $table->string('cedula')->unique();
             $table->string('username')->unique();
-            $table->string('email')->unique();
             $table->string('password', 60);
-            $table->enum('tipo',['admin','instituto'])->default('instituto');
+            $table->enum('tipo',['admin','transcriptor'])->default('transcriptor');
             $table->string('foto')->default('sin_foto_png');
             $table->enum('estatus',['activo','inactivo'])->default('inactivo');
             $table->rememberToken();
@@ -34,6 +33,8 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('users', function ($table){
+            $table->dropForeign(['id_municipios']);
+        });
     }
 }

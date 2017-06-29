@@ -65,6 +65,7 @@ class Ayudas extends Controller
                     ->with('resultados', 'BUSQUEDA POR ID');
             }
         }
+
         if ($request->tipo_sol == 'inst') {
             $ayuda = DB::table('solicitanteinst_solicitud')
                 ->join('eventos', 'solicitanteinst_solicitud.id_evento', '=', 'eventos.id')
